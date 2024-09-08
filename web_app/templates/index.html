@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Storm Investigations</title>
+    <title>Investigaciones Storm</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Storm Investigations</h1>
+    <h1>Investigaciones Storm</h1>
     <ul>
         {% for investigation in investigations %}
             <li>
@@ -15,7 +15,7 @@
                     {{ investigation.title }}
                 </a>
                 <a href="{{ url_for('download_pdf', investigation_id=investigation.id) }}" class="download-btn">
-                    Download PDF
+                    Descargar PDF
                 </a>
             </li>
         {% endfor %}

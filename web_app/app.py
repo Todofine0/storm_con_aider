@@ -52,6 +52,7 @@ def view_investigation(investigation_id):
     with open(filepath, 'r') as f:
         data = json.load(f)
     
+    data['id'] = investigation_id  # Add this line to include the id in the template
     return render_template('view.html', investigation=data)
 
 @app.route('/download/<investigation_id>')
@@ -66,9 +67,13 @@ def download_pdf(investigation_id):
         data = json.load(f)
     
     visualizations = generate_visualizations(data)
-    pdf_path = generate_pdf(data, visualizations)
+    pdf_buffer = generate_pdf(data, visualizations)
     
-    return send_file(pdf_path, as_attachment=True, download_name=f"{investigation_id}.pdf")
+    return send_file(pdf_buffer, as_attachment=True, download_name=f"{investigation_id}.pdf", mimetype='application/pdf')
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+    app.run(host='0.0.0.0', port=80, debug=True)
