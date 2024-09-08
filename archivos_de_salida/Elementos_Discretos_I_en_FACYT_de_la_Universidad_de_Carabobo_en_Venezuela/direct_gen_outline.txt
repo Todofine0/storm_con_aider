@@ -1,0 +1,41 @@
+# Introducción
+## Contexto Histórico
+## Objetivos del Curso
+# Contenido del Curso
+## Unidades Temáticas
+### Unidad 1: Introducción a los Elementos Discretos
+#### Conceptos Básicos
+#### Aplicaciones Prácticas
+### Unidad 2: Métodos Numéricos en Elementos Discretos
+#### Métodos de Discretización
+#### Algoritmos de Solución
+### Unidad 3: Simulación y Análisis de Sistemas Discretos
+#### Modelado de Sistemas
+#### Herramientas de Simulación
+### Unidad 4: Aplicaciones en Ingeniería
+#### Casos de Estudio
+#### Proyectos Finales
+# Metodología
+## Estrategias de Enseñanza
+## Evaluación y Calificación
+# Recursos Didácticos
+## Materiales de Lectura
+## Software Utilizado
+# Profesores Asociados
+## Lista de Profesores
+## Biografías y Experiencia
+# Estudiantes Destacados
+## Logros y Proyectos
+## Trayectorias Profesionales
+# Relación con Otros Cursos
+## Cursos Precedentes
+## Cursos Sucesores
+# Reconocimientos y Premios
+## Reconocimientos Académicos
+## Premios a Proyectos Estudiantiles
+# Referencias
+## Fuentes Primarias
+## Fuentes Secundarias
+# Enlaces Externos
+## Sitio Oficial de la Universidad de Carabobo
+## Recursos Adicionales

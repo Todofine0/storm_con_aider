@@ -1,0 +1,56 @@
+# Introducción
+## Contexto Histórico
+## Objetivos del Curso
+### Introducción a los Conceptos Fundamentales
+### Desarrollo de Habilidades Prácticas
+# Contenido del Curso
+## Unidades Temáticas
+### Unidad 1: Introducción a los Elementos Discretos
+#### Conceptos Básicos
+#### Aplicaciones Prácticas
+### Unidad 2: Teoría de Conjuntos
+#### Conceptos y Operaciones Básicas
+#### Aplicaciones en Informática
+### Unidad 3: Estructuras Discretas
+#### Grafos y Árboles
+#### Aplicaciones en Algoritmos
+### Unidad 4: Simulación y Análisis de Sistemas Discretos
+#### Modelado de Sistemas
+#### Herramientas de Simulación
+### Unidad 5: Aplicaciones en Ingeniería
+#### Casos de Estudio
+#### Proyectos Finales
+# Metodología
+## Estrategias de Enseñanza
+### Investigación y Reflexión
+### Práctica de Conceptos
+## Evaluación y Calificación
+### Criterios de Evaluación
+### Expectativas Académicas
+# Recursos Didácticos
+## Materiales de Lectura
+## Software Utilizado
+# Profesores Asociados
+## Lista de Profesores
+## Biografías y Experiencia
+# Estudiantes Destacados
+## Logros y Proyectos
+## Trayectorias Profesionales
+# Relación con Otros Cursos
+## Cursos Precedentes
+## Cursos Sucesores
+### Correrequisitos
+### Secuencias de Aprendizaje
+# Aplicaciones Prácticas
+## En Proyectos de Computación
+## En Administración de Proyectos
+## En Optimización y Asignación de Recursos
+# Reconocimientos y Premios
+## Reconocimientos Académicos
+## Premios a Proyectos Estudiantiles
+# Referencias
+## Fuentes Primarias
+## Fuentes Secundarias
+# Enlaces Externos
+## Sitio Oficial de la Universidad de Carabobo
+## Recursos Adicionales

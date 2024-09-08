@@ -25,3 +25,12 @@ secrets.toml
 */assertion.log
 *results/
 .venv/
+
+# Colocar esto
+bin/
+include/
+lib/
+lib64
+pyvenv.cfg
+share/
+# Colocar esto hasta aqui

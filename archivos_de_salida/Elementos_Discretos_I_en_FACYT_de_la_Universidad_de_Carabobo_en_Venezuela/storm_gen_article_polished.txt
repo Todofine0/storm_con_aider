@@ -1,0 +1,193 @@
+# summary
+
+El curso de Elementos Discretos I en la Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo en Venezuela es un programa académico que integra el estudio de las matemáticas discretas y su aplicación en la informática, con un enfoque en el método de los elementos discretos (DEM). Este método, utilizado para modelar sistemas granulares y materiales discontinuos, es fundamental en diversas áreas de la ingeniería y la ciencia, permitiendo la simulación de comportamientos complejos en sistemas microscópicos [1].
+En el contexto de FACYT, el curso se presenta como un componente clave en la formación multidisciplinaria de los estudiantes, abarcando desde la programación y estructuras de datos hasta la inteligencia artificial y el diseño web. Este enfoque multidisciplinario es esencial para preparar a los estudiantes para los desafíos actuales y futuros en el campo de la ingeniería informática, donde la empleabilidad de los egresados es una de las más altas en España, con más del 75% de los graduados encontrando trabajo al finalizar sus estudios [2].
+La introducción de los elementos discretos en el currículo de FACYT también se alinea con la filosofía de la universidad de priorizar la práctica sobre la teoría en la formación de sus estudiantes. Este enfoque se refleja en la integración temprana de los estudiantes en actividades prácticas y proyectos interdisciplinarios, lo que les permite aplicar sus conocimientos teóricos en situaciones reales desde el primer año de su pregrado [3]. Además, la implementación de este método en la enseñanza se ve apoyada por la Dirección de la universidad, que busca contribuir a la excelencia académica mediante la organización eficiente de los procesos académico-administrativos y el uso de tecnología de punta para admitir, registrar y certificar la historia académica de los estudiantes [4].
+En resumen, el estudio de los elementos discretos en FACYT de la Universidad de Carabobo no solo se enfoca en la teoría y la modelización numérica, sino que también integra prácticas interdisciplinarias y tecnologías avanzadas, preparando así a los estudiantes para enfrentar los desafíos del mundo laboral actual y futuro. Este enfoque integral ha sido reconocido por su contribución a la excelencia académica y la empleabilidad de los egresados, destacando la facultad como un referente en la formación de profesionales en ciencia de la computación en Venezuela [2].
+
+# Introducción
+
+El método de los elementos discretos (DEM, por sus siglas en inglés) es una técnica numérica utilizada para modelar sólidos como una colección de partículas o elementos de distintas formas, como discos, polígonos, esferas y poliedros, tanto en dos como en tres dimensiones [1]. Este método es fundamental en diversas áreas de la ingeniería y la ciencia, permitiendo la simulación de comportamientos complejos en sistemas granulares y materiales discontinuos.
+En el contexto de la Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo en Venezuela, el estudio de los elementos discretos se integra en un enfoque multidisciplinar que abarca desde la programación y estructuras de datos hasta la inteligencia artificial y el diseño web [2]. Este enfoque multidisciplinar es esencial para preparar a los estudiantes para enfrentar los desafíos actuales y futuros en el campo de la ingeniería informática, donde la empleabilidad de los egresados es una de las más altas en España, con más del 75% de los graduados encontrando trabajo al finalizar sus estudios [2].
+La introducción de los elementos discretos en el currículo de FACYT también se alinea con la filosofía de la universidad de priorizar la práctica sobre la teoría en la formación de sus estudiantes. Este enfoque se refleja en la integración temprana de los estudiantes en actividades prácticas y proyectos interdisciplinarios, lo que les permite aplicar sus conocimientos teóricos en situaciones reales desde el primer año de su pregrado [3].
+Además, la implementación de este método en la enseñanza se ve apoyada por la Dirección de la universidad, que busca contribuir a la excelencia académica mediante la organización eficiente de los procesos académico-administrativos y el uso de tecnología de punta para admitir, registrar y certificar la historia académica de los estudiantes [4].
+En resumen, el estudio de los elementos discretos en FACYT de la Universidad de Carabobo no solo se enfoca en la teoría y la modelización numérica, sino que también integra prácticas interdisciplinarias y tecnologías avanzadas, preparando así a los estudiantes para enfrentar los desafíos del mundo laboral actual y futuro.
+
+# Contenido del Curso
+
+## Introducción a los Elementos Discretos
+
+El curso de Elementos Discretos I en la Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo en Venezuela abarca una serie de temas fundamentales que permiten a los estudiantes comprender y aplicar conceptos clave en el campo de las matemáticas discretas y la informática. El contenido del curso se estructura en varias áreas temáticas, cada una de las cuales contribuye a la formación integral del estudiante en esta disciplina.
+
+## Teoría de Conjuntos
+
+Uno de los pilares del curso es la teoría de conjuntos, que se enfoca en la definición y manipulación de conjuntos de elementos que comparten características comunes. Los estudiantes aprenden a identificar y trabajar con diferentes tipos de conjuntos, incluyendo la unión, intersección, diferencia y complemento de conjuntos. Además, se introducen al uso de diagramas de Venn para visualizar y resolver problemas relacionados con conjuntos [5].
+
+## Teoría de Grafos
+
+La teoría de grafos es otra área crucial del curso, donde los estudiantes aprenden a representar y analizar relaciones entre objetos utilizando nodos y aristas. Esta teoría es fundamental para la resolución de problemas complejos en diversas áreas, como la gestión de proyectos, el diseño de redes y la optimización de recursos [6][7][8].
+
+## Elementos Discretos en Informática
+
+El curso también aborda la aplicación de los elementos discretos en el campo de la informática. Los estudiantes exploran cómo estos conceptos se utilizan en la programación, estructuras de datos, algoritmos, bases de datos, sistemas operativos, redes de computadoras, protocolos de comunicación y seguridad informática. Esta integración permite a los estudiantes comprender la importancia de las matemáticas discretas en la tecnología moderna [2][9].
+
+## Métodos Numéricos y Simulación
+
+Además de las teorías matemáticas, el curso incluye el estudio de métodos numéricos y técnicas de simulación, como el método de los elementos discretos. Este método permite modelar y analizar sistemas complejos mediante la representación de sólidos como una colección de partículas o elementos discretos [1].
+
+## Prerrequisitos y Correquisitos
+
+El curso requiere la aprobación de ciertos prerrequisitos, que son cursos cuya comprensión es esencial para el desarrollo del contenido del curso. Además, algunos cursos se consideran correquisitos, lo que significa que deben cursarse simultáneamente con el curso de Elementos Discretos I [10].
+
+## Actividades y Evaluación
+
+El curso se complementa con diversas actividades, como lecturas, reflexiones, prácticas y talleres, que permiten a los estudiantes aplicar los conceptos teóricos en situaciones prácticas. La evaluación del curso se basa en la medición de los conocimientos y habilidades adquiridos, así como en la capacidad de los estudiantes para integrar y aplicar estos conocimientos en problemas reales [5][3].
+
+## Orientación y Apoyo Académico
+
+La Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo ofrece un entorno académico orientado al fomento y desarrollo de la investigación científica y tecnológica. La dirección de la facultad y los departamentos académicos brindan apoyo y orientación a los estudiantes para asegurar su éxito académico y profesional [11].
+
+# Metodología
+
+## Método de los Elementos Discretos
+
+El método de los elementos discretos es una técnica numérica utilizada para simular el comportamiento de materiales compuestos por partículas discretas a escala microscópica. Este método se diferencia de los métodos tradicionales basados en teorías del continuo, como el método de los elementos finitos o de las diferencias finitas, al permitir la simulación de la rotura frágil y dúctil del material simultáneamente [1]. En este enfoque, se especifican las propiedades a escala micro de las partículas y los contactos entre ellas, incluyendo rigideces, resistencias del contacto, coeficiente de fricción, densidad, entre otros parámetros.
+
+## Aplicación en la Facultad Experimental de Ciencias y Tecnología (FaCyT)
+
+En la Facultad Experimental de Ciencias y Tecnología (FaCyT) de la Universidad de Carabobo, el método de los elementos discretos se ha aplicado en diversas investigaciones y proyectos académicos. La FaCyT, fundada el 2 de julio de 1993, ha promovido el desarrollo de la investigación científica y tecnológica, especialmente en la Región Central de Venezuela [11]. La facultad ha otorgado títulos en licenciatura en áreas como Química, Computación, Física, Matemática y Biología, y ha sido un centro de formación de profesionales en Ciencia de la Computación, quienes son capaces de desarrollar investigación y soluciones innovadoras en la disciplina [12].
+
+## Procesos de Investigación y Desarrollo
+
+La metodología de investigación en la FaCyT se caracteriza por un enfoque interdisciplinario que integra conocimientos de diversas áreas científicas y tecnológicas. Los docentes-investigadores de la facultad han llevado a cabo estudios mesoscópicos de soluciones de poli óxido de etileno (PEO) en agua utilizando dinámica difusiva de partículas (DPD), lo cual ha permitido avanzar en la comprensión de fenómenos a nivel molecular [13]. Además, la facultad ha promovido la participación de estudiantes en proyectos de investigación que les permiten integrar sus conocimientos teóricos con la práctica, fomentando así la innovación y el desarrollo tecnológico [3].
+
+## Gestión Académica y Administrativa
+
+La Dirección de la FaCyT se encarga de estructurar y organizar eficientemente los procesos académico-administrativos, asegurando la correcta admisión, registro y certificación de la historia académica de los estudiantes y egresados. Este proceso se realiza utilizando tecnología de punta y bajo los principios éticos del manejo de la información [4]. La gestión académica también incluye la promoción de programas de posgrado y la evaluación del trabajo realizado en la Universidad de Carabobo, lo cual es un indicador clave de la calidad académica y la satisfacción de los estudiantes [14].
+
+## Cursos y Actividades de Nivelación
+
+La FaCyT ofrece cursos introductorios y actividades de nivelación que permiten a los estudiantes adquirir los conocimientos básicos necesarios para abordar las asignaturas más avanzadas en el área de Elementos Discretos. Estas actividades son esenciales para la formación integral de los estudiantes y su preparación para la investigación y el desarrollo tecnológico [15].
+
+## Trabajo de Grado y Tesis
+
+El trabajo de grado en la FaCyT es un requisito para optar al título de licenciatura en Ciencia de la Computación y otras carreras afines. Los estudiantes deben presentar un trabajo de investigación que demuestre su capacidad para aplicar los conocimientos adquiridos y contribuir al avance de la disciplina. Este proceso es supervisado por la Dirección de Estudios de Postgrado de la facultad [16].
+
+# Recursos Didácticos
+
+## Materiales de Estudio
+
+La asignatura de Elementos Discretos I en el Departamento de Computación de la Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo proporciona a los estudiantes una variedad de recursos didácticos para facilitar su aprendizaje. Estos recursos incluyen lecturas específicas como "Un Mensaje a García" y "El Hombre de la Pez Rubia", que son utilizadas para fomentar la reflexión y la aplicación de conceptos teóricos en situaciones prácticas de la vida estudiantil [5].
+
+## Herramientas Tecnológicas
+
+Además de las lecturas, los estudiantes tienen acceso a herramientas tecnológicas avanzadas que les permiten simular y analizar fenómenos físicos relacionados con la interacción del útil con el terreno, un tema central en la asignatura. El método de los elementos discretos (DEM) es una de las herramientas clave utilizadas en estas simulaciones, lo que ayuda a los estudiantes a comprender los procesos de colapso del material excavado y el desgaste del útil [1].
+
+## Prácticas Interdisciplinarias
+
+La asignatura también promueve prácticas interdisciplinarias que integran conocimientos de diferentes áreas, como la programación, estructuras de datos, algoritmos, bases de datos, sistemas operativos, redes de computadoras, protocolos de comunicación y seguridad informática. Estas prácticas son diseñadas para permitir a los estudiantes expresar libremente sus opiniones y percepciones sobre su experiencia académica, lo que enriquece su comprensión y aplicación de los conceptos aprendidos [3].
+
+## Apoyo Académico
+
+La Dirección de la Universidad de Carabobo ofrece un apoyo académico integral a los estudiantes, utilizando tecnología de punta y siguiendo principios éticos en el manejo de la información. Este apoyo incluye la organización eficiente de procesos académico-administrativos que van desde la admisión hasta la certificación de la historia académica de los estudiantes y egresados [4].
+
+## Oportunidades de Empleabilidad
+
+La carrera de Ingeniería en Computación en la Universidad de Carabobo, que incluye el estudio de Elementos Discretos I, ha sido clasificada como una de las carreras con mayor empleabilidad en España, según el periódico "El Mundo". Más del 75% de los egresados de esta carrera encuentran trabajo al finalizar sus estudios, lo que demuestra la relevancia y demanda de los conocimientos adquiridos [2].
+
+# Profesores Asociados
+
+## Profesor Agregado
+
+El profesor José Gregorio Parra Figuerdo, identificado con el número de cédula (C.I. Nro.), ascendió a la categoría de Profesor Agregado con el trabajo titulado "DISEÑO DE ESTRATÉGIAS DE MERCADEO PARA LA INTRODUCCIÓN DE PINTURAS EN LOS SEGMENTOS DE AUTOPARTES Y DE INDUSTRIA GENERAL DEL MERCADO ECUATORIANO". Este ascenso fue considerado procedente por el Vicerrectorado Académico en oficio VRAC-ASC CD del 05/12/2007, con diez (10) meses de antigüedad acumulada, con efectos académicos y administrativos a partir del 18/05/2007[13].
+
+## Profesor Asistente
+
+El profesor José Gregorio Parra Figuerdo también ascendió a la categoría de Profesor Asistente con el trabajo titulado "ESTUDIO MESOSCÓPICO DE SOLUCIONES DE POLI OXIDO DE ETILENO (PEO) EN AGUA USANDO DINÁMICA DIFUSIVA DE PARTÍCULAS (DPD)". Este ascenso fue aprobado por el Vicerrectorado Académico en oficio VRAC-ASC CD del 05/12/2007, con diez (19) meses de antigüedad acumulada, con efectos académicos y administrativos a partir del 17/10/2007[13].
+
+## Renuncia de Profesores
+
+El profesor Douglas Leonardo Cortez Coa, identificado con el número de cédula (C.I. Nro.), renunció al cargo de Preparador de la asignatura Elementos Discretos, del Departamento de Biología, de la Facultad de Ciencias y Tecnología, a partir del 23/11/2007[13].
+
+## Investigación y Desarrollo
+
+La Facultad de Ciencias y Tecnología (FaCyT) de la Universidad de Carabobo ha sido un referente en el fomento y desarrollo de la investigación científica y tecnológica, especialmente en la Región Central de Venezuela. Sus departamentos otorgan títulos en licenciaturas como Química, Computación, Física, Matemática y Biología[11].
+
+## Formación Docente
+
+Algunos autores han profundizado en el tema de la formación docente, abogando por el establecimiento de puentes entre teoría y práctica para aproximarse a la comprensión de la realidad y a la construcción del conocimiento docente[3].
+
+## Aplicaciones de Elementos Discretos
+
+Los elementos discretos tienen aplicaciones en diversos campos, como el diseño de redes, donde los grafos pueden representar redes de comunicación, transporte o logística, ayudando a identificar posibles cuellos de botella y a diseñar estrategias de encaminamiento eficientes. Además, en la gestión de proyectos, los grafos como Actividad-en-Nodo (AON) y Actividad-en-Arco (AOA) ayudan a modelar las dependencias de las tareas, la programación y la asignación de recursos[7].
+
+# Estudiantes Destacados
+
+## Experiencias de Estudiantes
+
+Los estudiantes que han cursado la asignatura Elementos Discretos I en la Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo han destacado por su sólida formación teórica y práctica. Uno de los estudiantes destacó la combinación de asignaturas, señalando que "están muy bien estructuradas y vinculadas unas con otras. A medida que va avanzando el curso, vas relacionando los conocimientos" [2]. Esta experiencia refleja la intención del plan de estudios de integrar conceptos de manera progresiva, permitiendo a los estudiantes desarrollar una comprensión profunda del método de los elementos discretos (DEM) [1].
+
+## Programa de Compromiso Estudiantil
+
+Para recibir su título universitario, los estudiantes deben cumplir con el Programa de Compromiso Estudiantil, que incluye la acreditación de 30 horas en actividades culturales y de servicio comunitario [17]. Este programa no solo enriquece la formación académica de los estudiantes, sino que también les brinda la oportunidad de aplicar sus conocimientos en contextos prácticos y sociales, fortaleciendo así su compromiso con la comunidad y la excelencia académica [15].
+
+## Apoyo Académico y Administrativo
+
+La Dirección de la facultad juega un papel crucial en la experiencia de los estudiantes, contribuyendo a la excelencia académica a través de procesos de promoción innovadores y apoyo en la organización de los procesos académico-administrativos [4]. Este apoyo es esencial para garantizar que los estudiantes puedan enfocarse en su aprendizaje y desarrollo profesional, sin preocuparse por los aspectos administrativos.
+
+## Formación Integral
+
+La formación que reciben los estudiantes en Elementos Discretos I no se limita a las clases teóricas y prácticas, sino que también incluye laboratorios, prácticas, cursos y seminarios opcionales dictados por docentes de renombre [18]. Esta combinación de actividades académicas proporciona a los estudiantes una formación integral que les permite responder a desafíos complejos en el campo de la computación y la ingeniería.
+
+# Relación con Otros Cursos
+
+## Cursos Asociados
+
+El curso Elementos Discretos I en la Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo está relacionado con varios cursos tanto de nivelación como de postgrado y carreras específicas. Encontrarás los cursos asociados con nuestro introductorio y actividades de nivelación, así como aquellos relacionados con los diferentes postgrados y carreras [15].
+
+## Prerrequisitos y Correquisitos
+
+Se denomina prerrequisito a aquel curso cuya aprobación, por su contenido o por especiales razones administrativas, es indispensable para matricularse en Elementos Discretos I. Un curso se denomina correquisito de Elementos Discretos I cuando, por el contenido de ambos, el estudiante debe recibirlos al menos simultáneamente [10].
+
+## Relación con la Licenciatura en Ciencia de la Computación
+
+El curso Elementos Discretos I es fundamental para la formación del Licenciado en Ciencia de la Computación. Este profesional requiere conocimientos sólidos en los fundamentos matemáticos y algorítmicos de la disciplina de la computación, lo cual es abordado en este curso. Además, el Licenciado en Ciencia de la Computación es capaz de desarrollar investigación en esta disciplina y de concebir e implementar soluciones concretas e innovadoras para contribuir al bienestar común [12].
+
+## Contexto Histórico y Facultades Relacionadas
+
+El Proyecto de Creación de la Facultad de Ciencia y Tecnología (FACYT) fue presentado al Consejo Nacional de Universidades (CNU) en 1987, con el objetivo de simplificar su estructura y darle más flexibilidad al proceso de desarrollo y consolidación de sus dependencias. En este sentido, la FACYT forma parte de las siete facultades que conforman la Universidad de Carabobo, siendo una de las cuatro facultades seleccionadas para su desarrollo y consolidación [11][14].
+
+# Aplicaciones Prácticas
+
+## Integración de Conocimientos
+
+La unidad de apoyo conocida como La Dirección[^1] ha sido fundamental en la promoción y organización de procesos académicos que permiten a los estudiantes integrar sus conocimientos teóricos con la práctica docente. Este enfoque se ha visto reforzado por la implementación de tecnología de punta y la aplicación de principios éticos en el manejo de la información, lo que ha contribuido a la excelencia académica y a la atracción de los mejores estudiantes del país[^1].
+
+## Experiencia Docente
+
+Diversos autores han explorado la importancia de la formación docente y la necesidad de establecer conexiones entre la teoría y la práctica[^2]. En el contexto de Elementos Discretos I en FACYT de la Universidad de Carabobo, se ha ofrecido a los participantes la oportunidad de expresar libremente sus opiniones y percepciones sobre la experiencia de prácticas, lo que ha permitido una mayor comprensión de la realidad y la construcción del conocimiento docente[^2]. Este enfoque ha sido crucial para el trabajo interdisciplinario emprendido por los docentes-investigadores, quienes han integrado sus conocimientos en relación con su acción docente[^2].
+[^1]: La Dirección es una unidad de apoyo que busca contribuir a la excelencia académica, atrayendo a los mejores bachilleres del país a través de innovadores procesos de promoción y apoyando a las facultades en la promoción de sus programas de posgrado. Estructura y organiza eficientemente los procesos académico-administrativos orientados a admitir, registrar y certificar la historia académica de todos los estudiantes y egresados, usando tecnología de punta y bajo los principios éticos del manejo de la información.
+[^2]: Algunos autores (Day, 2005; Davini, 2001; Liston y Zeichner, 1997; Perrenoud, 2004) han profundizado en el tema de la formación docente y abogan por el establecimiento de puentes entre teoría y práctica con el fin de aproximarse a la comprensión de la realidad y a la construcción del conocimiento docente. Ofreció la posibilidad de que los participantes expresaran libremente sus opiniones y percepciones relacionadas con la experiencia de prácticas en el marco del proyecto que les permitió integrar sus conocimientos en relación con su acción docente. Para ello se indagó sobre su opinión sobre el trabajo interdisciplinario emprendido por los docentes-investigadores.
+
+# Reconocimientos y Premios
+
+En el ámbito académico, la Facultad de Ciencias y Tecnología (FACYT) de la Universidad de Carabobo ha sido reconocida por su excelencia en la formación de estudiantes y profesores. Un ejemplo destacado es el ascenso del profesor José Gregorio Parra Figuerdo a la categoría de Profesor Asistente, aprobado por el Vicerrectorado Académico en diciembre de 2007[13]. Este reconocimiento se basa en su trabajo titulado "Estudio Mesoscópico de Soluciones de Polioxido de Etileno (PEO) en Agua Usando Dinámica Difusiva de Partículas (DPD)", lo que demuestra la calidad de la investigación llevada a cabo en la facultad.
+Además, la facultad ha sido destacada por su contribución a la excelencia académica, atrayendo a los mejores bachilleres del país y apoyando a las facultades en la promoción de sus programas de posgrado[4]. Esto se refleja en la alta certeza vocacional de los estudiantes, con un 84% de ellos confirmando que han tomado la mejor decisión vocacional al elegir estudiar en FACYT[14].
+Para los estudiantes y profesores, participar en capacitaciones y seminarios ofrecidos por la universidad es una oportunidad para adquirir nuevas aptitudes y reconocimientos que pueden resaltar en sus currículos[19]. Estos reconocimientos no solo mejoran las habilidades individuales, sino que también contribuyen al prestigio general de la facultad.
+
+# Referencias
+
+[4] La Dirección es una unidad de apoyo que busca contribuir a la excelencia académica, atrayendo a los mejores bachilleres del país a través de innovadores procesos de promoción y apoyando a las facultades en la promoción de sus programas de posgrado. Estructura y organiza eficientemente los procesos académico-administrativos orientados a admitir, registrar y certificar la historia académica de todos los estudiantes y egresados, usando tecnología de punta y bajo los principios éticos del manejo de la información.
+[18] Títulos/Planes/Materias Nuestros planes de estudio (Licenciatura / Bachiller en Ciencias de la Computación) combinan clases teóricas, trabajo en laboratorio, prácticas, cursos y seminarios opcionales, dictados por prestigiosos docentes.
+[11] Dirección de Asuntos Estudiantiles: Prof. Orestes Montilla. Dirección de Docencia y Desarrollo Curricular: Prof. Ilse. Dirección de Extensión: Prof. Ysmel La Rosa. Dirección de Tecnologías de Información y Comunicación: Prof. Johana Guerrero. Coordinación de la Unidad de Formación Socio-Humanística: Prof. Sharon Basso. Coordinación Biblioteca: Lic. Magaly Tortolero. Es la publicación semestral de la FaCyT para la divulgación de artículos científicos arbitrados.
+[13] V ASCENSO a la categoría de Profesor AGREGADO, con el Trabajo Titulado: «DISEÑO DE ESTRATÉ- GIAS DE MERCADEO PARA LA INTRODUC- CIÓN DE PINTURAS EN LOS SEGMENTOS DE AUTOPARTES Y DE INDUSTRIA GENE- RAL DEL MERCADO ECUATORIANO». VICE- RRECTORADO ACADÉMICO en oficio VRAC- ASC CD del 05/12/2007, lo considera PROCEDENTE, con diez (10) meses de antigüedad acumulada, con efectos académicos y administrativos a partir del 18/05/2007. CD-043 CD-044 CONSEJO DE FACULTAD CIENCIAS Y TEC- NOLOGÍA FACYT-694 del 27- NOV-2007 Prof.
+CD-043 CD-044 CONSEJO DE FACULTAD CIENCIAS Y TEC- NOLOGÍA FACYT-694 del 27- NOV-2007 Prof. JOSÉ GREGORIO PARRA FIGUERE- DO, C.I. Nro. V ASCENSO a la categoría de Profesor ASISTENTE, asciende con el Trabajo Titulado: «ESTUDIO MESOS- CÓPICO DE SOLUCIONES DE POLI OXIDO DE ETILENO (PEO) EN AGUA USANDO DI- NÁMICA DIFUSIVA DE PARTÍCULAS (DPD)». VICERRECTORADO ACADÉMICO en oficio VRAC-ASC CD del 05/12/2007, lo considera PROCEDENTE, con diez (19) meses de antigüedad acumulada, con efectos académicos y administrativos a partir del 17/10/ CD-045 CD-046 B15 AUTORIZACIÓN DE PAGOS POR HO- NORARIOS PROFESIONALES ECONÓMICAS Y SOCIALES CFCES-5082 del 10- JUL-2006 Prof.
+[5] Universidad de Carabobo. FACYT. Departamento de Computación. Elementos Discretos I. ASIGNACIÓN TEORIA DE CONJUNTOS Parte I: Desarrollo Investigar sobre las lecturas “Un Mensaje a García” y“El Hombre de la Pez Rubia”, y desarrollar un documento (una página por lectura) con sus reflexiones acerca de las mismas y de cómo éstas pueden incidir en su vida como estudiante universitario.Parte II: Práctica 1.
+[15] Aquí encontrarás los cursos asociados a los diferentes postgrados.
+Aquí encontrarás los cursos asociados a las diferentes carreras.
+
+# Enlaces Externos
+
+- **Programa de la Asignatura**: [Programa de la asignatura - Universidad de Carabobo, FACYT][20]
+- **Artículo relacionado**: [10 trabajos para políglotas][19]
+- **Diseño de redes y gestión de proyectos**: [Diseño de redes y gestión de proyectos][7]
