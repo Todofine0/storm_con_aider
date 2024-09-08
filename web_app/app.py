@@ -35,23 +35,26 @@ STORM_OUTPUT_DIR = '/home/ubuntu/storm/archivos_de_salida/'
 def index():
     investigations = []
     logging.debug(f"Scanning directory: {STORM_OUTPUT_DIR}")
-    for filename in os.listdir(STORM_OUTPUT_DIR):
-        if filename.endswith('.json'):
-            filepath = os.path.join(STORM_OUTPUT_DIR, filename)
-            logging.debug(f"Processing file: {filepath}")
-            with open(filepath, 'r') as f:
-                data = json.load(f)
-                investigations.append({
-                    'id': filename[:-5],  # Remove .json extension
-                    'title': data.get('topic', 'Untitled Investigation')
-                })
+    for dirname in os.listdir(STORM_OUTPUT_DIR):
+        dirpath = os.path.join(STORM_OUTPUT_DIR, dirname)
+        if os.path.isdir(dirpath):
+            logging.debug(f"Processing directory: {dirpath}")
+            storm_gen_article_path = os.path.join(dirpath, 'storm_gen_article.txt')
+            if os.path.exists(storm_gen_article_path):
+                with open(storm_gen_article_path, 'r') as f:
+                    content = f.read()
+                    title = content.split('\n', 1)[0].strip('# ')
+                    investigations.append({
+                        'id': dirname,
+                        'title': title
+                    })
     logging.debug(f"Found {len(investigations)} investigations")
     return render_template('index.html', investigations=investigations)
 
 @app.route('/view/<investigation_id>')
 def view_investigation(investigation_id):
-    filename = f"{investigation_id}.json"
-    filepath = os.path.join(STORM_OUTPUT_DIR, filename)
+    dirpath = os.path.join(STORM_OUTPUT_DIR, investigation_id)
+    filepath = os.path.join(dirpath, 'storm_gen_article.txt')
     
     logging.debug(f"Attempting to view investigation: {filepath}")
     if not os.path.exists(filepath):
@@ -59,15 +62,33 @@ def view_investigation(investigation_id):
         abort(404)
     
     with open(filepath, 'r') as f:
-        data = json.load(f)
+        content = f.read()
     
-    data['id'] = investigation_id
+    # Parse the content into sections
+    sections = []
+    current_section = {'title': '', 'content': ''}
+    for line in content.split('\n'):
+        if line.startswith('# '):
+            if current_section['title']:
+                sections.append(current_section)
+                current_section = {'title': '', 'content': ''}
+            current_section['title'] = line.strip('# ')
+        else:
+            current_section['content'] += line + '\n'
+    if current_section['title']:
+        sections.append(current_section)
+    
+    data = {
+        'id': investigation_id,
+        'topic': sections[0]['title'] if sections else 'Untitled Investigation',
+        'content': sections[1:] if len(sections) > 1 else []
+    }
     return render_template('view.html', investigation=data)
 
 @app.route('/download/<investigation_id>')
 def download_pdf(investigation_id):
-    filename = f"{investigation_id}.json"
-    filepath = os.path.join(STORM_OUTPUT_DIR, filename)
+    dirpath = os.path.join(STORM_OUTPUT_DIR, investigation_id)
+    filepath = os.path.join(dirpath, 'storm_gen_article.txt')
     
     logging.debug(f"Attempting to download PDF for investigation: {filepath}")
     if not os.path.exists(filepath):
@@ -75,7 +96,26 @@ def download_pdf(investigation_id):
         abort(404)
     
     with open(filepath, 'r') as f:
-        data = json.load(f)
+        content = f.read()
+    
+    # Parse the content into sections
+    sections = []
+    current_section = {'title': '', 'content': ''}
+    for line in content.split('\n'):
+        if line.startswith('# '):
+            if current_section['title']:
+                sections.append(current_section)
+                current_section = {'title': '', 'content': ''}
+            current_section['title'] = line.strip('# ')
+        else:
+            current_section['content'] += line + '\n'
+    if current_section['title']:
+        sections.append(current_section)
+    
+    data = {
+        'topic': sections[0]['title'] if sections else 'Untitled Investigation',
+        'content': sections[1:] if len(sections) > 1 else []
+    }
     
     visualizations = generate_visualizations(data)
     pdf_buffer = generate_pdf(data, visualizations)
