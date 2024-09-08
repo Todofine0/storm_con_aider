@@ -3,6 +3,7 @@ import json
 import sys
 import subprocess
 import logging
+import re
 
 logging.basicConfig(level=logging.DEBUG)
 
