@@ -8,20 +8,22 @@
 </head>
 <body>
     <h1>Investigaciones Storm</h1>
-    <ul>
+    <div class="investigation-list">
         {% for investigation in investigations %}
-            <li>
-                <a href="{{ url_for('view_investigation', investigation_id=investigation.id) }}">
-                    {{ investigation.title }}
-                </a>
+            <div class="investigation-item">
+                <h2>
+                    <a href="{{ url_for('view_investigation', investigation_id=investigation.id) }}">
+                        {{ investigation.title }}
+                    </a>
+                </h2>
                 <a href="{{ url_for('download_pdf', investigation_id=investigation.id) }}" class="download-btn">
                     Descargar PDF
                 </a>
-            </li>
+            </div>
         {% else %}
-            <li>No se encontraron investigaciones.</li>
+            <p>No se encontraron investigaciones.</p>
         {% endfor %}
-    </ul>
+    </div>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>
