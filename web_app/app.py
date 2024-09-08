@@ -1,32 +1,12 @@
 import os
 import json
-import sys
-import subprocess
 import logging
 import re
-
-logging.basicConfig(level=logging.DEBUG)
-
-def install_package(package):
-    try:
-        subprocess.check_call(["sudo", "apt-get", "update"])
-        subprocess.check_call(["sudo", "apt-get", "install", "-y", f"python3-{package}"])
-    except subprocess.CalledProcessError:
-        logging.error(f"Failed to install {package}. Please install it manually.")
-        sys.exit(1)
-
-required_packages = ['flask', 'reportlab', 'matplotlib', 'networkx', 'pillow']
-
-for package in required_packages:
-    try:
-        __import__(package)
-    except ImportError:
-        logging.info(f"{package} not found. Installing...")
-        install_package(package)
-
 from flask import Flask, render_template, send_file, abort
 from utils.pdf_generator import generate_pdf
 from utils.ai_visualizer import generate_visualizations
+
+logging.basicConfig(level=logging.DEBUG)
 
 app = Flask(__name__)
 
@@ -148,4 +128,4 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     logging.info("Starting Flask application...")
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
