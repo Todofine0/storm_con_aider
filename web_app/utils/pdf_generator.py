@@ -51,10 +51,10 @@ def generate_pdf(data, visualizations):
                 # Convert bullet points
                 paragraph = re.sub(r'^•\s', '<bullet>•</bullet> ', paragraph, flags=re.MULTILINE)
                 
-                # Convert references
-                paragraph = re.sub(r'\[(\d+)\]', lambda m: f'<super>{m.group(0)}</super>', paragraph)
+                # Remove reference numbers
+                paragraph = re.sub(r'\[(\d+)\]', '', paragraph)
                 
-                # Convert URLs
+                # Convert URLs to hyperlinks
                 paragraph = re.sub(r'(https?://\S+)', lambda m: create_hyperlink(m.group(1), m.group(1)), paragraph)
                 
                 elements.append(Paragraph(paragraph, styles['Justify']))
@@ -72,7 +72,13 @@ def generate_pdf(data, visualizations):
     if 'references' in data and data['references']:
         elements.append(Paragraph("Referencias", styles['Heading2']))
         for i, ref in enumerate(data['references'], 1):
-            elements.append(Paragraph(f'[{i}] {ref}', styles['Normal']))
+            elements.append(Paragraph(f'{ref}', styles['Normal']))
+    
+    # Add external links
+    if 'external_links' in data and data['external_links']:
+        elements.append(Paragraph("Enlaces Externos", styles['Heading2']))
+        for link in data['external_links']:
+            elements.append(Paragraph(create_hyperlink(link['url'], link['text']), styles['Normal']))
     
     doc.build(elements)
     buffer.seek(0)
