@@ -43,7 +43,7 @@ def index():
             if os.path.exists(storm_gen_article_path):
                 with open(storm_gen_article_path, 'r') as f:
                     content = f.read()
-                    title = content.split('\n', 1)[0].strip('# ')
+                    title = os.path.basename(dirpath)
                     investigations.append({
                         'id': dirname,
                         'title': title
