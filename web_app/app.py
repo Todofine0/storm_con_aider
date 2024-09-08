@@ -117,6 +117,19 @@ def download_pdf(investigation_id):
         'content': sections[1:] if len(sections) > 1 else []
     }
     
+    # Add references
+    references = []
+    for section in data['content']:
+        references.extend(re.findall(r'\[(\d+)\]\s*(.*)', section['content']))
+    data['references'] = [ref[1] for ref in references]
+    
+    # Add external links
+    external_links = [
+        {'url': 'https://www.uc.edu.ve/facyt', 'text': 'Sitio web oficial de FACYT'},
+        {'url': 'https://www.uc.edu.ve', 'text': 'Universidad de Carabobo'},
+    ]
+    data['external_links'] = external_links
+    
     visualizations = generate_visualizations(data)
     pdf_buffer = generate_pdf(data, visualizations)
     
