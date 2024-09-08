@@ -4,6 +4,7 @@ from PIL import Image
 import io
 import matplotlib
 matplotlib.use('Agg')  # Use Agg backend to avoid GUI issues
+matplotlib.rcParams['font.family'] = 'DejaVu Sans'
 
 def generate_visualizations(data):
     visualizations = []
@@ -17,11 +18,11 @@ def generate_visualizations(data):
     
     plt.figure(figsize=(10, 8))
     pos = nx.spring_layout(G)  # Use spring layout for better spacing
-    nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=3000, font_size=8, font_weight='bold', font_family='sans-serif')
+    nx.draw(G, pos, with_labels=True, node_color='lightblue', node_size=3000, font_size=8, font_weight='bold')
     
     # Adjust labels to prevent overlap
     labels = nx.get_node_attributes(G, 'name')
-    nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight='bold', font_family='sans-serif')
+    nx.draw_networkx_labels(G, pos, labels, font_size=8, font_weight='bold')
     
     buf = io.BytesIO()
     plt.savefig(buf, format='png', dpi=300, bbox_inches='tight')
