@@ -15,33 +15,49 @@ def generate_pdf(data, visualizations):
     doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=72, leftMargin=72, topMargin=72, bottomMargin=18)
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
+    styles.add(ParagraphStyle(name='Heading1', fontSize=16, spaceAfter=12))
+    styles.add(ParagraphStyle(name='Heading2', fontSize=14, spaceAfter=10))
+    styles.add(ParagraphStyle(name='Heading3', fontSize=12, spaceAfter=8))
     
     elements = []
     
     # Add title
     elements.append(Paragraph(data['topic'], styles['Title']))
-    elements.append(Spacer(1, 12))
+    elements.append(Spacer(1, 24))
     
     # Add content
     for section in data['content']:
-        elements.append(Paragraph(section['title'], styles['Heading2']))
+        elements.append(Paragraph(section['title'], styles['Heading1']))
         
         # Process content
         content = section['content']
         
-        # Convert numbered lists
-        content = re.sub(r'\n(\d+)\.\s', lambda m: f'\n<seq id="list{m.group(1)}">{m.group(1)}.</seq> ', content)
+        # Split content into paragraphs
+        paragraphs = content.split('\n\n')
         
-        # Convert bullet points
-        content = re.sub(r'\n•\s', '\n<bullet>•</bullet> ', content)
+        for paragraph in paragraphs:
+            # Check if paragraph is a subsection
+            if paragraph.startswith('## '):
+                elements.append(Paragraph(paragraph[3:], styles['Heading2']))
+            elif paragraph.startswith('### '):
+                elements.append(Paragraph(paragraph[4:], styles['Heading3']))
+            else:
+                # Convert numbered lists
+                paragraph = re.sub(r'^(\d+)\.\s', lambda m: f'<seq id="list{m.group(1)}">{m.group(1)}.</seq> ', paragraph, flags=re.MULTILINE)
+                
+                # Convert bullet points
+                paragraph = re.sub(r'^•\s', '<bullet>•</bullet> ', paragraph, flags=re.MULTILINE)
+                
+                # Convert references
+                paragraph = re.sub(r'\[(\d+)\]', lambda m: f'<super>{m.group(0)}</super>', paragraph)
+                
+                # Convert URLs
+                paragraph = re.sub(r'(https?://\S+)', lambda m: create_hyperlink(m.group(1), m.group(1)), paragraph)
+                
+                elements.append(Paragraph(paragraph, styles['Justify']))
+            
+            elements.append(Spacer(1, 6))
         
-        # Convert references
-        content = re.sub(r'\[(\d+)\]', lambda m: f'<super>{m.group(0)}</super>', content)
-        
-        # Convert URLs
-        content = re.sub(r'(https?://\S+)', lambda m: create_hyperlink(m.group(1), m.group(1)), content)
-        
-        elements.append(Paragraph(content, styles['Justify']))
         elements.append(Spacer(1, 12))
     
     # Add visualizations
