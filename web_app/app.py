@@ -4,7 +4,12 @@ import sys
 import subprocess
 
 def install_package(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+    try:
+        subprocess.check_call(["sudo", "apt-get", "update"])
+        subprocess.check_call(["sudo", "apt-get", "install", "-y", f"python3-{package}"])
+    except subprocess.CalledProcessError:
+        print(f"Failed to install {package}. Please install it manually.")
+        sys.exit(1)
 
 required_packages = ['flask', 'reportlab', 'matplotlib', 'networkx', 'pillow']
 
