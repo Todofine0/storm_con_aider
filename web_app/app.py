@@ -1,6 +1,21 @@
-from flask import Flask, render_template, send_file
 import os
 import json
+import sys
+import subprocess
+
+def install_package(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+required_packages = ['flask', 'reportlab', 'matplotlib', 'networkx', 'pillow']
+
+for package in required_packages:
+    try:
+        __import__(package)
+    except ImportError:
+        print(f"{package} not found. Installing...")
+        install_package(package)
+
+from flask import Flask, render_template, send_file
 from utils.pdf_generator import generate_pdf
 from utils.ai_visualizer import generate_visualizations
 
