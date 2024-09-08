@@ -114,7 +114,7 @@ def download_pdf(investigation_id):
         sections.append(current_section)
     
     data = {
-        'topic': sections[0]['title'] if sections else 'Untitled Investigation',
+        'topic': sections[0]['title'] if sections else 'Investigación sin título',
         'content': sections[1:] if len(sections) > 1 else []
     }
     
@@ -124,14 +124,16 @@ def download_pdf(investigation_id):
         references.extend(re.findall(r'\[(\d+)\]\s*(.*)', section['content']))
     data['references'] = [ref[1] for ref in references]
     
-    # Process content to convert links to Markdown format
+    # Process content to convert links to Markdown format and handle subsections
     for section in data['content']:
         section['content'] = re.sub(r'\[(\d+)\]\s*(https?://\S+)', r'[\2](\2)', section['content'])
+        section['content'] = re.sub(r'^##\s+(.*)$', r'## \1', section['content'], flags=re.MULTILINE)
+        section['content'] = re.sub(r'^###\s+(.*)$', r'### \1', section['content'], flags=re.MULTILINE)
     
-    # Add external links
+    # Add external links (you might want to make this dynamic based on the investigation)
     external_links = [
-        {'url': 'https://www.uc.edu.ve/facyt', 'text': 'Sitio web oficial de FACYT'},
         {'url': 'https://www.uc.edu.ve', 'text': 'Universidad de Carabobo'},
+        {'url': 'https://www.uc.edu.ve/facyt', 'text': 'Facultad de Ciencias y Tecnología (FACYT)'},
     ]
     data['external_links'] = external_links
     
