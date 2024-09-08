@@ -8,16 +8,19 @@ import io
 import re
 
 def create_hyperlink(url, text):
-    return f'<link href="{url}">{text}</link>'
+    return f'<link href="{url}" color="blue">{text}</link>'
 
 def generate_pdf(data, visualizations):
     buffer = io.BytesIO()
     doc = SimpleDocTemplate(buffer, pagesize=letter, rightMargin=72, leftMargin=72, topMargin=72, bottomMargin=18)
     styles = getSampleStyleSheet()
+    styles['Heading1'].fontSize = 16
+    styles['Heading1'].spaceAfter = 12
+    styles['Heading2'].fontSize = 14
+    styles['Heading2'].spaceAfter = 10
+    styles['Heading3'].fontSize = 12
+    styles['Heading3'].spaceAfter = 8
     styles.add(ParagraphStyle(name='Justify', alignment=TA_JUSTIFY))
-    styles.add(ParagraphStyle(name='Heading1', fontSize=16, spaceAfter=12))
-    styles.add(ParagraphStyle(name='Heading2', fontSize=14, spaceAfter=10))
-    styles.add(ParagraphStyle(name='Heading3', fontSize=12, spaceAfter=8))
     
     elements = []
     
