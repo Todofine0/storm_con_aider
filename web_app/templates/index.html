@@ -18,6 +18,8 @@
                     Descargar PDF
                 </a>
             </li>
+        {% else %}
+            <li>No se encontraron investigaciones.</li>
         {% endfor %}
     </ul>
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
