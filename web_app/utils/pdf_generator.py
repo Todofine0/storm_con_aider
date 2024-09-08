@@ -1,7 +1,7 @@
 from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, ListItem, ListFlowable, PageBreak
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, ListItem, ListFlowable, PageBreak, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER
+from reportlab.lib.enums import TA_JUSTIFY, TA_CENTER, TA_LEFT
 from reportlab.lib import colors
 from reportlab.lib.units import inch
 from reportlab.pdfgen import canvas
@@ -46,22 +46,61 @@ def generate_pdf(data, visualizations):
     styles['Heading3'].fontSize = 14
     styles['Heading3'].spaceAfter = 8
     styles.add(ParagraphStyle(name='Justified', parent=styles['Normal'], alignment=TA_JUSTIFY))
+    styles.add(ParagraphStyle(name='Abstract', parent=styles['Normal'], fontSize=10, leading=14, alignment=TA_JUSTIFY))
     
     elements = []
     
     # Add title
     elements.append(Paragraph(data['topic'], styles['Title']))
-    elements.append(PageBreak())
+    elements.append(Spacer(1, 12))
+    
+    # Add abstract
+    elements.append(Paragraph("Resumen", styles['Heading2']))
+    abstract = """Este documento presenta un análisis exhaustivo generado por STORM (Sistema de Tecnología Organizada para la Recopilación y Manejo de información). 
+    STORM es una herramienta avanzada de investigación que utiliza inteligencia artificial para recopilar, analizar y sintetizar información de diversas fuentes. 
+    El objetivo de este informe es proporcionar una visión completa y objetiva sobre el tema en cuestión, basada en datos actualizados y relevantes."""
+    elements.append(Paragraph(abstract, styles['Abstract']))
+    elements.append(Spacer(1, 12))
+    
+    # Add introduction
+    elements.append(Paragraph("1. Introducción", styles['Heading1']))
+    introduction = """STORM (Sistema de Tecnología Organizada para la Recopilación y Manejo de información) es una plataforma de investigación de vanguardia 
+    que emplea técnicas avanzadas de inteligencia artificial para realizar análisis exhaustivos sobre diversos temas. Este informe es el resultado de un proceso 
+    riguroso de recopilación, análisis y síntesis de información proveniente de múltiples fuentes confiables.
+
+    El propósito de este documento es ofrecer una visión integral y objetiva sobre el tema "{}", abordando sus aspectos más relevantes y proporcionando 
+    información actualizada y precisa. A lo largo de las siguientes secciones, se presentarán los hallazgos clave, se analizarán las tendencias actuales 
+    y se explorarán las implicaciones futuras relacionadas con el tema en cuestión.
+
+    Este informe está estructurado de manera que facilite la comprensión y el análisis del tema, comenzando con una visión general y profundizando 
+    progresivamente en aspectos más específicos. Cada sección ha sido cuidadosamente elaborada para proporcionar información valiosa y perspectivas únicas, 
+    respaldadas por datos y fuentes confiables.""".format(data['topic'])
+    elements.append(Paragraph(introduction, styles['Justified']))
+    elements.append(Spacer(1, 12))
     
     # Add table of contents
+    elements.append(PageBreak())
     elements.append(Paragraph("Tabla de Contenidos", styles['Heading1']))
-    for section in data['content']:
-        elements.append(Paragraph(section['title'], styles['Normal']))
+    toc_data = [["Sección", "Página"]]
+    toc_data.append(["1. Introducción", "2"])
+    for i, section in enumerate(data['content'], start=2):
+        toc_data.append([f"{i}. {section['title']}", ""])
+    toc_style = TableStyle([
+        ('TEXTCOLOR', (0, 0), (-1, -1), colors.black),
+        ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, -1), 10),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 12),
+        ('BACKGROUND', (0, 0), (-1, 0), colors.lightgrey)
+    ])
+    toc_table = Table(toc_data, colWidths=[5*inch, 1*inch])
+    toc_table.setStyle(toc_style)
+    elements.append(toc_table)
     elements.append(PageBreak())
     
     # Add content
-    for section in data['content']:
-        elements.append(Paragraph(section['title'], styles['Heading1']))
+    for i, section in enumerate(data['content'], start=2):
+        elements.append(Paragraph(f"{i}. {section['title']}", styles['Heading1']))
         
         # Process content
         content = section['content']
@@ -101,6 +140,25 @@ def generate_pdf(data, visualizations):
         for viz in visualizations:
             elements.append(Image(viz, width=6*inch, height=4.5*inch))
             elements.append(Spacer(1, 12))
+    
+    # Add conclusion
+    elements.append(PageBreak())
+    elements.append(Paragraph("Conclusión", styles['Heading1']))
+    conclusion = """Este informe generado por STORM ha proporcionado un análisis detallado y exhaustivo sobre "{}". A través de la recopilación y síntesis 
+    de información proveniente de diversas fuentes confiables, hemos presentado una visión integral del tema, abordando sus aspectos más relevantes y 
+    explorando sus implicaciones.
+
+    La utilización de tecnologías avanzadas de inteligencia artificial en el proceso de investigación ha permitido ofrecer un análisis objetivo y actualizado, 
+    basado en datos precisos y tendencias actuales. Este enfoque innovador facilita la comprensión de temas complejos y proporciona insights valiosos para 
+    la toma de decisiones informadas.
+
+    Es importante destacar que, si bien este informe ofrece una visión completa del tema en cuestión, el conocimiento en este campo está en constante evolución. 
+    Se recomienda mantener un seguimiento continuo de las nuevas investigaciones y desarrollos relacionados con este tema para estar al día con los avances más recientes.
+
+    STORM seguirá mejorando y actualizando sus capacidades de análisis e investigación, con el objetivo de proporcionar informes cada vez más precisos, 
+    completos y útiles para sus usuarios.""".format(data['topic'])
+    elements.append(Paragraph(conclusion, styles['Justified']))
+    elements.append(Spacer(1, 12))
     
     # Add references
     if 'references' in data and data['references']:
