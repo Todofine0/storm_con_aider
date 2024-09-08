@@ -45,7 +45,7 @@ def generate_pdf(data, visualizations):
     styles['Heading2'].spaceAfter = 10
     styles['Heading3'].fontSize = 14
     styles['Heading3'].spaceAfter = 8
-    styles['Normal'].alignment = TA_JUSTIFY
+    styles.add(ParagraphStyle(name='Justified', parent=styles['Normal'], alignment=TA_JUSTIFY))
     
     elements = []
     
@@ -88,7 +88,7 @@ def generate_pdf(data, visualizations):
                 # Convert URLs to hyperlinks
                 paragraph = re.sub(r'\[(.*?)\]\((https?://\S+)\)', lambda m: create_hyperlink(m.group(2), m.group(1)), paragraph)
                 
-                elements.append(Paragraph(paragraph, styles['Justify']))
+                elements.append(Paragraph(paragraph, styles['Justified']))
             
             elements.append(Spacer(1, 6))
         
