@@ -36,7 +36,7 @@ def generate_pdf(data, visualizations):
         content = re.sub(r'\n•\s', '\n<bullet>•</bullet> ', content)
         
         # Convert references
-        content = re.sub(r'\[(\d+)\]', lambda m: f'<super><link href="#ref{m.group(1)}">[{m.group(1)}]</link></super>', content)
+        content = re.sub(r'\[(\d+)\]', lambda m: f'<super>{m.group(0)}</super>', content)
         
         # Convert URLs
         content = re.sub(r'(https?://\S+)', lambda m: create_hyperlink(m.group(1), m.group(1)), content)
@@ -50,9 +50,10 @@ def generate_pdf(data, visualizations):
         elements.append(Spacer(1, 12))
     
     # Add references
-    elements.append(Paragraph("Referencias", styles['Heading2']))
-    for i, ref in enumerate(data.get('references', []), 1):
-        elements.append(Paragraph(f'<a name="ref{i}"/>[{i}] {ref}', styles['Normal']))
+    if 'references' in data and data['references']:
+        elements.append(Paragraph("Referencias", styles['Heading2']))
+        for i, ref in enumerate(data['references'], 1):
+            elements.append(Paragraph(f'[{i}] {ref}', styles['Normal']))
     
     doc.build(elements)
     buffer.seek(0)
