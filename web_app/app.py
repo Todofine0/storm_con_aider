@@ -128,4 +128,4 @@ def page_not_found(e):
 
 if __name__ == '__main__':
     logging.info("Starting Flask application...")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)
