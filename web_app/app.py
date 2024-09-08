@@ -124,6 +124,10 @@ def download_pdf(investigation_id):
         references.extend(re.findall(r'\[(\d+)\]\s*(.*)', section['content']))
     data['references'] = [ref[1] for ref in references]
     
+    # Process content to convert links to Markdown format
+    for section in data['content']:
+        section['content'] = re.sub(r'\[(\d+)\]\s*(https?://\S+)', r'[\2](\2)', section['content'])
+    
     # Add external links
     external_links = [
         {'url': 'https://www.uc.edu.ve/facyt', 'text': 'Sitio web oficial de FACYT'},
