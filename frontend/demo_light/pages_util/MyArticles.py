@@ -71,7 +71,7 @@ def my_articles_page():
                 hasClicked = card(title="Get started",
                                   text="Start your first research!",
                                   image=DemoFileIOHelper.read_image_as_base64(
-                                      os.path.join(demo_util.get_demo_dir(), "assets", "void.jpg")),
+                                      os.path.join(demo_util.get_demo_dir(), "frontend", "demo_light", "assets", "void.jpg")),
                                   styles=DemoUIHelper.get_article_card_UI_style())
                 if hasClicked:
                     st.session_state.selected_page = 1
