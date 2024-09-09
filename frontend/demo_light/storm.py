@@ -13,6 +13,9 @@ def main():
     global database
     st.set_page_config(layout='wide')
 
+    if "first_run" not in st.session_state:
+        st.session_state['first_run'] = True
+
     if "app_initialized" not in st.session_state:
         st.session_state['app_initialized'] = False
 
