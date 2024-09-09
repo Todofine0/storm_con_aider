@@ -28,9 +28,9 @@ def main():
             for key, value in st.secrets.items():
                 if isinstance(value, str):
                     os.environ[key] = value
-        except FileNotFoundError:
+        except (FileNotFoundError, st.secrets.ConfigError):
             st.error("No secrets file found. Please create a .streamlit/secrets.toml file with your API keys.")
-            st.stop()
+            st.warning("You can continue without API keys, but some features may not work.")
 
     # initialize session_state
     if "selected_article_index" not in st.session_state:
