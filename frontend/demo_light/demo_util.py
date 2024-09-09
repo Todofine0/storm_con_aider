@@ -494,7 +494,7 @@ def _display_main_article(selected_article_file_path_dict, show_reference=True, 
 
 
 def get_demo_dir():
-    return "/home/ubuntu/storm"
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def clear_other_page_session_state(page_index: Optional[int]):
