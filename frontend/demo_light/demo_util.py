@@ -506,7 +506,7 @@ def set_storm_runner():
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
     
-    secrets_path = os.path.join(get_demo_dir(), '.streamlit', 'secrets.toml')
+    secrets_path = os.path.join(os.path.dirname(get_demo_dir()), 'secrets.toml')
     if os.path.exists(secrets_path):
         try:
             with open(secrets_path, 'r') as f:

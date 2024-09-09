@@ -20,7 +20,7 @@ This is a minimal user interface for `STORMWikiRunner` which includes the follow
     ```bash
     pip install -r requirements.txt
     ```
-2. Make sure you set up the API keys following the instructions in the main README file. Create a copy of `secrets.toml` and place it under `.streamlit/`.
+2. Make sure you set up the API keys following the instructions in the main README file. Create a `secrets.toml` file in the root directory of the project.
 3. Run the following command to start the user interface:
     ```bash
     streamlit run storm.py
