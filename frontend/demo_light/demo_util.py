@@ -468,22 +468,29 @@ def _display_main_article(selected_article_file_path_dict, show_reference=True, 
 
     with st.container(height=1000, border=True):
         table_content_sidebar = st.sidebar.expander("**Table of contents**", expanded=True)
-        _display_main_article_text(article_text=article_data.get("article", ""),
-                                   citation_dict=article_data.get("citations", {}),
-                                   table_content_sidebar=table_content_sidebar)
+        if article_data:
+            _display_main_article_text(article_text=article_data.get("article", ""),
+                                       citation_dict=article_data.get("citations", {}),
+                                       table_content_sidebar=table_content_sidebar)
+        else:
+            st.error("No article data found. Please check the article files.")
 
     # display reference panel
-    if show_reference and "citations" in article_data:
+    if article_data and show_reference and "citations" in article_data:
         with st.sidebar.expander("**References**", expanded=True):
             with st.container(height=800, border=False):
                 _display_references(citation_dict=article_data.get("citations", {}))
+    elif not article_data:
+        st.error("No article data found. Please check the article files.")
 
     # display conversation history
-    if show_conversation and "conversation_log" in article_data:
+    if article_data and show_conversation and "conversation_log" in article_data:
         with st.expander(
                 "**STORM** is powered by a knowledge agent that proactively research a given topic by asking good questions coming from different perspectives.\n\n"
                 ":sunglasses: Click here to view the agent's brain**STORM**ing process!"):
             _display_persona_conversations(conversation_log=article_data.get("conversation_log", {}))
+    elif not article_data:
+        st.error("No article data found. Please check the article files.")
 
 
 def get_demo_dir():
