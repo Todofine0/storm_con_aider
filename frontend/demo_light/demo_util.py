@@ -506,21 +506,30 @@ def set_storm_runner():
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
     
-    secrets_path = '/home/ubuntu/storm/secrets.toml'
-    if os.path.exists(secrets_path):
-        try:
-            with open(secrets_path, 'r') as f:
-                secrets = toml.load(f)
-            openai_api_key = secrets.get('OPENAI_API_KEY')
-            ydc_api_key = secrets.get('YDC_API_KEY')
-            if not openai_api_key or not ydc_api_key:
-                st.error("API keys not found in secrets.toml. Some features will be disabled.")
-        except Exception as e:
-            st.error(f"Error reading secrets.toml: {str(e)}")
-            openai_api_key = None
-            ydc_api_key = None
-    else:
-        st.error(f"secrets.toml file not found at {secrets_path}. Please create this file with your API keys.")
+    secrets_paths = [
+        '/home/ubuntu/.streamlit/secrets.toml',
+        '/home/ubuntu/storm/.streamlit/secrets.toml',
+        '/home/ubuntu/storm/secrets.toml'
+    ]
+    secrets_found = False
+    for secrets_path in secrets_paths:
+        if os.path.exists(secrets_path):
+            try:
+                with open(secrets_path, 'r') as f:
+                    secrets = toml.load(f)
+                openai_api_key = secrets.get('OPENAI_API_KEY')
+                ydc_api_key = secrets.get('YDC_API_KEY')
+                if openai_api_key and ydc_api_key:
+                    secrets_found = True
+                    break
+            except Exception as e:
+                st.error(f"Error reading {secrets_path}: {str(e)}")
+
+    if not secrets_found:
+        st.error("No valid secrets.toml file found. Please create a secrets.toml file with your API keys in one of these locations:")
+        for path in secrets_paths:
+            st.error(f"- {path}")
+        st.warning("You can continue without API keys, but some features may not work.")
         openai_api_key = None
         ydc_api_key = None
 
