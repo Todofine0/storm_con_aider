@@ -13,8 +13,11 @@ def main():
     global database
     st.set_page_config(layout='wide')
 
-    if "first_run" not in st.session_state:
-        st.session_state['first_run'] = True
+    if "app_initialized" not in st.session_state:
+        st.session_state['app_initialized'] = False
+
+    if not st.session_state['app_initialized']:
+        st.session_state['app_initialized'] = True
 
 #    # set api keys from secrets
 #    if st.session_state['first_run']:

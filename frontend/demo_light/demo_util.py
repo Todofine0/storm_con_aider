@@ -499,9 +499,9 @@ def clear_other_page_session_state(page_index: Optional[int]):
 
 
 def set_storm_runner():
-    current_working_dir = os.path.join(get_demo_dir(), "DEMO_WORKING_DIR")
-    if not os.path.exists(current_working_dir):
-        os.makedirs(current_working_dir)
+    demo_dir = get_demo_dir()
+    current_working_dir = os.path.join(demo_dir, "DEMO_WORKING_DIR")
+    os.makedirs(current_working_dir, exist_ok=True)
 
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
