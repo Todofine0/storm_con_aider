@@ -16,11 +16,21 @@ def main():
     if "first_run" not in st.session_state:
         st.session_state['first_run'] = True
 
+#    # set api keys from secrets
+#    if st.session_state['first_run']:
+#        for key, value in st.secrets.items():
+#            if type(value) == str:
+#                os.environ[key] = value
+
     # set api keys from secrets
     if st.session_state['first_run']:
-        for key, value in st.secrets.items():
-            if type(value) == str:
-                os.environ[key] = value
+        try:
+            for key, value in st.secrets.items():
+                if isinstance(value, str):
+                    os.environ[key] = value
+        except FileNotFoundError:
+            st.error("No secrets file found. Please create a .streamlit/secrets.toml file with your API keys.")
+            st.stop()
 
     # initialize session_state
     if "selected_article_index" not in st.session_state:
