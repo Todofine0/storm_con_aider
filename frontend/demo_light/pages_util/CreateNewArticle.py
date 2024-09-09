@@ -74,8 +74,6 @@ def create_new_article_page():
                 demo_util._display_persona_conversations(DemoFileIOHelper.read_json_file(conversation_log_path))
             else:
                 st.error(f"Conversation log not found at {conversation_log_path}. Please check the article files.")
-            else:
-                st.error(f"Conversation log not found at {conversation_log_path}. Please check the article files.")
             st.session_state["page3_write_article_state"] = "final_writing"
             status.update(label="brain**STORM**ing complete!", state="complete")
 
