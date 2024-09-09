@@ -533,6 +533,21 @@ def set_storm_runner():
         for path in secrets_paths:
             st.error(f"- {path}")
         st.warning("You can continue without API keys, but some features may not work.")
+        
+        # Create an empty secrets.toml file in the first available location
+        for secrets_path in secrets_paths:
+            try:
+                os.makedirs(os.path.dirname(secrets_path), exist_ok=True)
+                with open(secrets_path, 'w') as f:
+                    f.write("# Add your API keys here\n")
+                    f.write("DEEPSEEK_API_KEY = ''\n")
+                    f.write("DEEPSEEK_API_BASE = ''\n")
+                    f.write("YDC_API_KEY = ''\n")
+                st.success(f"Created an empty secrets.toml file at {secrets_path}. Please add your API keys to this file.")
+                break
+            except Exception as e:
+                st.error(f"Failed to create secrets.toml at {secrets_path}: {str(e)}")
+        
         deepseek_api_key = deepseek_api_base = ydc_api_key = None
 
     if deepseek_api_key and deepseek_api_base:
