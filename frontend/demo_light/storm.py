@@ -28,8 +28,11 @@ def main():
             for key, value in st.secrets.items():
                 if isinstance(value, str):
                     os.environ[key] = value
-        except (FileNotFoundError, st.secrets.ConfigError):
+        except FileNotFoundError:
             st.error("No secrets file found. Please create a .streamlit/secrets.toml file with your API keys.")
+            st.warning("You can continue without API keys, but some features may not work.")
+        except Exception as e:
+            st.error(f"An error occurred while loading secrets: {str(e)}")
             st.warning("You can continue without API keys, but some features may not work.")
 
     # initialize session_state

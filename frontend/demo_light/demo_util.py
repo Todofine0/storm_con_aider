@@ -504,10 +504,23 @@ def set_storm_runner():
 
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
-    llm_configs.init_openai_model(openai_api_key=st.secrets['OPENAI_API_KEY'], openai_type='openai')
-    llm_configs.set_question_asker_lm(OpenAIModel(model='gpt-4-1106-preview', api_key=st.secrets['OPENAI_API_KEY'],
-                                                  api_provider='openai',
-                                                  max_tokens=500, temperature=1.0, top_p=0.9))
+    
+    try:
+        openai_api_key = st.secrets['OPENAI_API_KEY']
+        ydc_api_key = st.secrets['YDC_API_KEY']
+    except KeyError:
+        st.error("API keys not found in secrets. Some features will be disabled.")
+        openai_api_key = None
+        ydc_api_key = None
+
+    if openai_api_key:
+        llm_configs.init_openai_model(openai_api_key=openai_api_key, openai_type='openai')
+        llm_configs.set_question_asker_lm(OpenAIModel(model='gpt-4-1106-preview', api_key=openai_api_key,
+                                                      api_provider='openai',
+                                                      max_tokens=500, temperature=1.0, top_p=0.9))
+    else:
+        st.warning("OpenAI API key not found. Some features will be disabled.")
+
     engine_args = STORMWikiRunnerArguments(
         output_dir=current_working_dir,
         max_conv_turn=3,
@@ -516,7 +529,11 @@ def set_storm_runner():
         retrieve_top_k=5
     )
 
-    rm = YouRM(ydc_api_key=st.secrets['YDC_API_KEY'], k=engine_args.search_top_k)
+    if ydc_api_key:
+        rm = YouRM(ydc_api_key=ydc_api_key, k=engine_args.search_top_k)
+    else:
+        st.warning("YDC API key not found. Search functionality will be limited.")
+        rm = None
 
     runner = STORMWikiRunner(engine_args, llm_configs, rm)
     st.session_state["runner"] = runner
