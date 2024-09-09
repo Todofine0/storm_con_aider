@@ -511,7 +511,7 @@ def set_storm_runner():
     current_working_dir = os.path.join("/home/ubuntu/storm", "archivos_de_salida")
     os.makedirs(current_working_dir, exist_ok=True)
     demo_dir = get_demo_dir()
-    current_working_dir = os.path.join(demo_dir, "DEMO_WORKING_DIR")
+    current_working_dir = os.path.join("/home/ubuntu/storm", "archivos_de_salida")
     os.makedirs(current_working_dir, exist_ok=True)
 
     # configure STORM runner
