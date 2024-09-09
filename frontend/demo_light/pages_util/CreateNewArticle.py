@@ -1,6 +1,7 @@
 import os
 import time
 
+import re
 import demo_util
 import streamlit as st
 from demo_util import DemoFileIOHelper, DemoTextProcessingHelper, DemoUIHelper, truncate_filename
