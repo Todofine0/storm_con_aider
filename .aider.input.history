@@ -909,3 +909,354 @@
 
 # 2024-09-09 01:12:29.436379
 +/help
+
+# 2024-09-09 01:20:06.859908
++/add setup.py knowledge_storm/ frontend/ examples/ eval/ README.md web_app archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/
+
+# 2024-09-09 01:20:20.117800
++/drop archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/conversation_log.json archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/llm_call_history.jsonl archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/storm_gen_article.txt archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/raw_search_results.json
+
+# 2024-09-09 01:20:30.665190
++/tokens
+
+# 2024-09-09 01:20:43.647703
++alli tienes un mejor contexto para que te luzcas en mejorar el archivo pdf final. Haz los cambios que consideres necesarios
+
+# 2024-09-09 01:21:20.489874
++/add setup.py knowledge_storm/ frontend/ examples/ eval/ README.md web_app archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/
+
+# 2024-09-09 01:21:25.463135
++/drop archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/conversation_log.json archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/llm_call_history.jsonl archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/storm_gen_article.txt archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/raw_search_results.json
+
+# 2024-09-09 01:21:40.106859
++me responderas solamente en español
+
+# 2024-09-09 01:22:36.658890
++/drop archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/conversation_log.json archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/llm_call_history.jsonl archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/storm_gen_article.txt archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/raw_search_results.json archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/url_to_info.json
+
+# 2024-09-09 01:22:40.092347
++me responderas solamente en español
+
+# 2024-09-09 01:23:24.697659
++/models deepseek
+
+# 2024-09-09 01:24:12.651549
++/model deepseek-chat
+
+# 2024-09-09 01:24:21.346499
++me responderas solamente en español
+
+# 2024-09-09 01:24:48.933806
++/model deepseek-coder
+
+# 2024-09-09 01:24:53.024424
++me responderas solamente en español
+
+# 2024-09-09 01:25:07.474099
++/model openrouter/deepseek/deepseek-coder
+
+# 2024-09-09 01:25:11.294380
++me responderas solamente en español
+
+# 2024-09-09 01:26:14.287373
++/tokens
+
+# 2024-09-09 01:26:42.044953
++/model deepseek-coder
+
+# 2024-09-09 01:26:46.921652
++me responderas solamente en español
+
+# 2024-09-09 01:27:29.608792
++/drop archivos_de_salida/
+
+# 2024-09-09 01:27:33.079845
++me responderas solamente en español
+
+# 2024-09-09 01:27:41.073117
++/tokens
+
+# 2024-09-09 01:28:33.068904
++/add setup.py knowledge_storm/ frontend/ examples/ eval/ README.md web_app
+
+# 2024-09-09 01:28:38.485440
++me responderas solamente en español
+
+# 2024-09-09 01:29:00.236236
++/tokens
+
+# 2024-09-09 01:30:11.756376
++/run python3 web_app/app.py
+
+# 2024-09-09 01:32:32.771272
++/run chmod +x web_app/app.py
+
+# 2024-09-09 01:32:39.185523
++/run python3 web_app/app.py
+
+# 2024-09-09 01:32:57.050084
++/add setup.py knowledge_storm/ frontend/ examples/ eval/ README.md web_app
+
+# 2024-09-09 01:33:00.568275
++/run python3 web_app/app.py
+
+# 2024-09-09 01:34:55.465454
++/drop archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/conversation_log.json archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/llm_call_history.jsonl archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/storm_gen_article.txt archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/raw_search_results.json archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/url_to_info.json
+
+# 2024-09-09 01:35:24.985943
++/drop archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/conversation_log.json archivos_de_salida/
+
+# 2024-09-09 01:35:31.470503
++/run python3 web_app/app.py
+
+# 2024-09-09 01:36:22.352792
++/run chmod +x web_app/app.py
+
+# 2024-09-09 01:36:28.837082
++/run sudo python3 web_app/app.py
+
+# 2024-09-09 01:37:50.761092
++/tokens
+
+# 2024-09-09 01:38:02.983775
++me responderas solamente en español
+
+# 2024-09-09 01:38:45.091577
++ya resolvi eso
+
+# 2024-09-09 01:39:56.838749
++alli tienes un mejor contexto para que te luzcas en mejorar el archivo pdf final. Haz los cambios que consideres necesarios
+
+# 2024-09-09 01:56:02.235451
++/tokens
+
+# 2024-09-09 01:59:04.722706
++/clear
+
+# 2024-09-09 01:59:07.191134
++/tokens
+
+# 2024-09-09 01:59:31.066914
++/add setup.py knowledge_storm/ frontend/ eval/ README.md
+
+# 2024-09-09 01:59:33.742035
++/tokens
+
+# 2024-09-09 02:00:09.403956
++/clear
+
+# 2024-09-09 02:00:18.366528
++/drop
+
+# 2024-09-09 02:00:32.739260
++me responderas solamente en español
+
+# 2024-09-09 02:07:06.076436
++/add setup.py knowledge_storm/ frontend/ eval/ README.md
+
+# 2024-09-09 02:07:17.385525
++/tokens
+
+# 2024-09-09 02:08:11.554207
++que hay en la carpeta frontend/ y para que me serviria?
+
+# 2024-09-09 02:10:10.598425
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 02:10:32.523737
++solucion
+
+# 2024-09-09 02:11:43.101784
++solucion a esto: Running streamlit run frontend/demo_light/storm.py
++/bin/bash: line 1: streamlit: command not found
+
+# 2024-09-09 02:12:03.439860
++/toke
+
+# 2024-09-09 02:12:35.015706
++/drop
+
+# 2024-09-09 02:12:38.409016
++/toke
+
+# 2024-09-09 02:12:41.129612
++/tokens
+
+# 2024-09-09 02:14:59.874468
++/add frontend/
+
+# 2024-09-09 02:15:06.028411
++/tokens
+
+# 2024-09-09 02:15:12.497800
++(storm) ubuntu@storm-bhs5:~/storm$ sudo python3 frontend/demo_light/storm.py 
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 6, in <module>
++    import demo_util
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 8, in <module>
++    import markdown
++ModuleNotFoundError: No module named 'markdown'
+
+# 2024-09-09 02:17:01.254834
++/run pip install -r frontend/demo_light/requirements.txt
+
+# 2024-09-09 02:17:56.520513
++/run pip install streamlit markdown unidecode streamlit-float streamlit-option-menu
+
+# 2024-09-09 02:18:11.475892
++/run python3 frontend/demo_light/storm.py
+
+# 2024-09-09 02:20:15.734448
++/run pip install -r frontend/demo_light/requirements.txt
+
+# 2024-09-09 02:20:31.637064
++/run pip install streamlit markdown unidecode streamlit-float streamlit-option-menu
+
+# 2024-09-09 02:20:45.843196
++/run python3 frontend/demo_light/storm.py
+
+# 2024-09-09 02:21:34.847261
++/run pip install -r requirements.txt
+
+# 2024-09-09 02:22:09.552352
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 02:24:03.249723
++solucion
+
+# 2024-09-09 02:37:21.832492
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 02:40:49.668481
++solucion porque en el navegador sale esto: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a .streamlit/secrets.toml file with your API keys.
+
+# 2024-09-09 02:41:59.036357
++/run mkdir -p frontend/demo_light/.streamlit
+
+# 2024-09-09 02:41:59.170702
++/run touch frontend/demo_light/.streamlit/secrets.toml
+
+# 2024-09-09 02:42:36.918745
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 02:43:37.769608
++solucion
+
+# 2024-09-09 02:47:35.459737
++creo que hay que añadirle los permisos respectivos y sobre todo el de ejecucion
+
+# 2024-09-09 02:50:44.616732
++/add frontend/
+
+# 2024-09-09 02:50:58.261006
++creo que hay que añadirle los permisos respectivos y sobre todo el de ejecucion
+
+# 2024-09-09 03:07:51.593424
++mamamelo
+
+# 2024-09-09 03:08:22.115663
++/add frontend/
+
+# 2024-09-09 03:08:28.441789
++/drop
+
+# 2024-09-09 03:08:58.331504
++me responderas solamente en español
+
+# 2024-09-09 03:09:16.247190
++/tokens
+
+# 2024-09-09 03:09:23.061371
++/add frontend/
+
+# 2024-09-09 03:09:28.773080
++creo que hay que añadirle los permisos respectivos y sobre todo el de ejecucion
+
+# 2024-09-09 03:10:00.540252
++/run chmod +x frontend/demo_light/storm.py
+
+# 2024-09-09 03:10:00.668911
++/run chmod +x frontend/demo_light/demo_util.py
+
+# 2024-09-09 03:10:00.790216
++/run chmod +x frontend/demo_light/pages_util/MyArticles.py
+
+# 2024-09-09 03:10:00.911291
++/run chmod +x frontend/demo_light/pages_util/CreateNewArticle.py
+
+# 2024-09-09 03:10:17.783705
++/run find frontend/demo_light -name "*.py" -type f -exec chmod +x {} +
+
+# 2024-09-09 03:10:39.952744
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:12:03.435704
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:15:25.110184
++muestra esto en el navegador: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a .streamlit/secrets.toml file with your API keys.
++
++You can continue without API keys, but some features may not work. Ademas esta /home/ubuntu/.streamlit/secrets.toml no es la ruta, no se porque muestra eso, si en realidad se encuentra en /home/ubuntu/storm/frontend/demo_light/.streamlit/secrets.toml
+
+# 2024-09-09 03:18:13.310776
++/run pip install toml
+
+# 2024-09-09 03:18:44.724868
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:21:33.584870
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:25:13.434106
++mano resuelve el tema de la ubicacion de la llave secreta, es mas se encuantra en la raiz secrets.toml
+
+# 2024-09-09 03:25:59.666963
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:27:08.085930
++mano sigue apareciendo esto: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a .streamlit/secrets.toml file with your API keys.
++
++You can continue without API keys, but some features may not work.
+
+# 2024-09-09 03:29:15.337831
++/run cd /ruta/a/tu/proyecto
+
+# 2024-09-09 03:29:15.471468
++/run nano secrets.toml  # Crea o edita el archivo secrets.toml en la raíz del proyecto
+
+# 2024-09-09 03:29:24.316263
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:31:09.757275
++mano la ruta del proyecto es la ruta /home/ubuntu/storm/ soluciona por favor
+
+# 2024-09-09 03:31:57.507361
++/run cd /home/ubuntu/storm
+
+# 2024-09-09 03:31:57.631766
++/run nano secrets.toml  # Crea o edita el archivo secrets.toml en la raíz del proyecto
+
+# 2024-09-09 03:32:00.057827
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:33:29.105793
++En el navegador sale esto: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: /home/ubuntu/storm/secrets.toml
++
++You can continue without API keys, but some features may not work. Soluciona mano
+
+# 2024-09-09 03:36:40.665076
++la ruta de los archivos de salida es /home/ubuntu/storm/archivos_de_salida/ es mas chamo, la ruta de todo storm se encuentra en /home/ubuntu/storm/ asi que soluciona de una vez por todas
+
+# 2024-09-09 03:37:45.248386
++/run cd /home/ubuntu/storm
+
+# 2024-09-09 03:37:45.388334
++/run git add .

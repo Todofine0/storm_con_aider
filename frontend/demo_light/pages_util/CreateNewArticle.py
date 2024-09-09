@@ -43,7 +43,7 @@ def create_new_article_page():
                         st.session_state["page3_write_article_state"] = "initiated"
 
     if st.session_state["page3_write_article_state"] == "initiated":
-        current_working_dir = os.path.join(demo_util.get_demo_dir(), "DEMO_WORKING_DIR")
+        current_working_dir = "/home/ubuntu/storm/archivos_de_salida"
         if not os.path.exists(current_working_dir):
             os.makedirs(current_working_dir)
 
