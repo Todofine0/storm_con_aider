@@ -30,16 +30,19 @@ def main():
 
     # set api keys from secrets
     if st.session_state['first_run']:
-        try:
-            for key, value in st.secrets.items():
-                if isinstance(value, str):
-                    os.environ[key] = value
-        except FileNotFoundError:
-            secrets_path = '/home/ubuntu/storm/secrets.toml'
+        secrets_path = '/home/ubuntu/storm/secrets.toml'
+        if os.path.exists(secrets_path):
+            try:
+                with open(secrets_path, 'r') as f:
+                    secrets = toml.load(f)
+                for key, value in secrets.items():
+                    if isinstance(value, str):
+                        os.environ[key] = value
+            except Exception as e:
+                st.error(f"An error occurred while loading secrets: {str(e)}")
+                st.warning("You can continue without API keys, but some features may not work.")
+        else:
             st.error(f"No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: {secrets_path}")
-            st.warning("You can continue without API keys, but some features may not work.")
-        except Exception as e:
-            st.error(f"An error occurred while loading secrets: {str(e)}")
             st.warning("You can continue without API keys, but some features may not work.")
 
     # initialize session_state

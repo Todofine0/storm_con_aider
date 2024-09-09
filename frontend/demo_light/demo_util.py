@@ -507,6 +507,7 @@ def set_storm_runner():
     llm_configs = STORMWikiLMConfigs()
     
     secrets_path = '/home/ubuntu/storm/secrets.toml'
+    secrets_path = '/home/ubuntu/storm/secrets.toml'
     if os.path.exists(secrets_path):
         try:
             with open(secrets_path, 'r') as f:
@@ -519,27 +520,6 @@ def set_storm_runner():
             deepseek_api_key = deepseek_api_base = ydc_api_key = None
     else:
         st.error(f"No secrets.toml file found at {secrets_path}. Please create a secrets.toml file with your API keys at this location.")
-        deepseek_api_key = deepseek_api_base = ydc_api_key = None
-        
-        secrets_paths = [
-            '/home/ubuntu/.streamlit/secrets.toml',
-            '/home/ubuntu/storm/.streamlit/secrets.toml',
-            '/home/ubuntu/storm/secrets.toml'
-        ]
-        # Create an empty secrets.toml file in the first available location
-        for secrets_path in secrets_paths:
-            try:
-                os.makedirs(os.path.dirname(secrets_path), exist_ok=True)
-                with open(secrets_path, 'w') as f:
-                    f.write("# Add your API keys here\n")
-                    f.write("DEEPSEEK_API_KEY = ''\n")
-                    f.write("DEEPSEEK_API_BASE = ''\n")
-                    f.write("YDC_API_KEY = ''\n")
-                st.success(f"Created an empty secrets.toml file at {secrets_path}. Please add your API keys to this file.")
-                break
-            except Exception as e:
-                st.error(f"Failed to create secrets.toml at {secrets_path}: {str(e)}")
-        
         deepseek_api_key = deepseek_api_base = ydc_api_key = None
 
     if deepseek_api_key and deepseek_api_base:
