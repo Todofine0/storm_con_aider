@@ -15,7 +15,7 @@ import streamlit as st
 # import sys
 # sys.path.append('../../')
 from knowledge_storm import STORMWikiRunnerArguments, STORMWikiRunner, STORMWikiLMConfigs
-from knowledge_storm.lm import OpenAIModel
+from knowledge_storm.lm import DeepSeekModel
 from knowledge_storm.rm import YouRM
 from knowledge_storm.storm_wiki.modules.callback import BaseCallbackHandler
 from knowledge_storm.utils import truncate_filename
@@ -506,45 +506,37 @@ def set_storm_runner():
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
     
-    secrets_paths = [
-        '/home/ubuntu/.streamlit/secrets.toml',
-        '/home/ubuntu/storm/.streamlit/secrets.toml',
-        '/home/ubuntu/storm/secrets.toml'
-    ]
-    secrets_found = False
-    for secrets_path in secrets_paths:
-        if os.path.exists(secrets_path):
-            try:
-                with open(secrets_path, 'r') as f:
-                    secrets = toml.load(f)
-                openai_api_key = secrets.get('OPENAI_API_KEY')
-                ydc_api_key = secrets.get('YDC_API_KEY')
-                if openai_api_key and ydc_api_key:
-                    secrets_found = True
-                    break
-            except Exception as e:
-                st.error(f"Error reading {secrets_path}: {str(e)}")
-
-    if not secrets_found:
-        st.error("No valid secrets.toml file found. Please create a secrets.toml file with your API keys in one of these locations:")
-        for path in secrets_paths:
-            st.error(f"- {path}")
-        st.warning("You can continue without API keys, but some features may not work.")
-        openai_api_key = None
-        ydc_api_key = None
-
-    if openai_api_key:
-        openai_model = OpenAIModel(model='gpt-4-1106-preview', api_key=openai_api_key,
-                                   api_provider='openai',
-                                   max_tokens=500, temperature=1.0, top_p=0.9)
-        llm_configs.init_openai_model(openai_api_key=openai_api_key, openai_type='openai')
-        llm_configs.set_conv_simulator_lm(openai_model)
-        llm_configs.set_question_asker_lm(openai_model)
-        llm_configs.set_outline_gen_lm(openai_model)
-        llm_configs.set_article_gen_lm(openai_model)
-        llm_configs.set_article_polish_lm(openai_model)
+    secrets_path = '/home/ubuntu/storm/secrets.toml'
+    if os.path.exists(secrets_path):
+        try:
+            with open(secrets_path, 'r') as f:
+                secrets = toml.load(f)
+            deepseek_api_key = secrets.get('DEEPSEEK_API_KEY')
+            deepseek_api_base = secrets.get('DEEPSEEK_API_BASE')
+            ydc_api_key = secrets.get('YDC_API_KEY')
+            if not all([deepseek_api_key, deepseek_api_base, ydc_api_key]):
+                raise ValueError("Missing required API keys in secrets.toml")
+        except Exception as e:
+            st.error(f"Error reading {secrets_path}: {str(e)}")
+            st.warning("You can continue without API keys, but some features may not work.")
+            deepseek_api_key = deepseek_api_base = ydc_api_key = None
     else:
-        st.warning("OpenAI API key not found. Some features will be disabled.")
+        st.error(f"No secrets.toml file found at {secrets_path}")
+        st.warning("You can continue without API keys, but some features may not work.")
+        deepseek_api_key = deepseek_api_base = ydc_api_key = None
+
+    if deepseek_api_key and deepseek_api_base:
+        deepseek_model = DeepSeekModel(model='deepseek-chat', api_key=deepseek_api_key,
+                                       api_base=deepseek_api_base,
+                                       max_tokens=500, temperature=1.0, top_p=0.9)
+        llm_configs.init_deepseek_model(deepseek_api_key=deepseek_api_key, deepseek_api_base=deepseek_api_base)
+        llm_configs.set_conv_simulator_lm(deepseek_model)
+        llm_configs.set_question_asker_lm(deepseek_model)
+        llm_configs.set_outline_gen_lm(deepseek_model)
+        llm_configs.set_article_gen_lm(deepseek_model)
+        llm_configs.set_article_polish_lm(deepseek_model)
+    else:
+        st.warning("DeepSeek API key or base URL not found. Some features will be disabled.")
 
     engine_args = STORMWikiRunnerArguments(
         output_dir=current_working_dir,
