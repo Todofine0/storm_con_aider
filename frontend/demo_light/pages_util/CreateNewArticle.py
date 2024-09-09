@@ -68,7 +68,10 @@ def create_new_article_page():
             conversation_log_path = os.path.join(st.session_state["page3_current_working_dir"],
                                                  st.session_state["page3_topic_name_truncated"], "conversation_log.json")
             if os.path.exists(conversation_log_path):
-                demo_util._display_persona_conversations(DemoFileIOHelper.read_json_file(conversation_log_path))
+                if os.path.exists(conversation_log_path):
+                    demo_util._display_persona_conversations(DemoFileIOHelper.read_json_file(conversation_log_path))
+                else:
+                    st.error(f"Conversation log not found at {conversation_log_path}. Please check the article files.")
             else:
                 st.error(f"Conversation log not found at {conversation_log_path}. Please check the article files.")
             st.session_state["page3_write_article_state"] = "final_writing"
