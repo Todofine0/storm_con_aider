@@ -29,6 +29,7 @@ def main():
                 if isinstance(value, str):
                     os.environ[key] = value
         except FileNotFoundError:
+            secrets_path = '/home/ubuntu/storm/secrets.toml'
             st.error(f"No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: {secrets_path}")
             st.warning("You can continue without API keys, but some features may not work.")
         except Exception as e:
