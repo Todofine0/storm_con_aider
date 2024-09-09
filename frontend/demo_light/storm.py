@@ -1,7 +1,7 @@
 import os
 
-script_dir = os.path.dirname(os.path.abspath(__file__))
-wiki_root_dir = os.path.dirname(os.path.dirname(script_dir))
+script_dir = "/home/ubuntu/storm/frontend/demo_light"
+wiki_root_dir = "/home/ubuntu/storm"
 
 import demo_util
 from pages_util import MyArticles, CreateNewArticle
