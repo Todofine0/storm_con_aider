@@ -1260,3 +1260,824 @@
 
 # 2024-09-09 03:37:45.388334
 +/run git add .
+
+# 2024-09-09 03:37:45.658619
++/run git commit -m "Actualizar rutas de STORM y archivos de salida"
+
+# 2024-09-09 03:37:45.822141
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:38:39.409523
++solucion
+
+# 2024-09-09 03:39:07.662265
++/run cd /home/ubuntu/storm
+
+# 2024-09-09 03:39:07.821208
++/run git add frontend/demo_light/demo_util.py
+
+# 2024-09-09 03:39:07.972007
++/run git commit -m "Corregir ruta de la imagen void.jpg"
+
+# 2024-09-09 03:39:08.159737
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:41:16.871178
++ademas lo que tengo en la llave secreta es: nano secrets.toml
++######################
++# Set up DEEPSEEK API key.
++DEEPSEEK_API_KEY="sk-9286078e2c884d31995b5d9d4228894e"
++
++# DeepSeek API base URL (default is https://api.deepseek.com)
++DEEPSEEK_API_BASE="https://api.deepseek.com"
++
++# Set up You.com search API key.
++YDC_API_KEY="139dc133-d24f-4150-b01b-987e5f92c77c<__>1PwcULETU8N2v5f42gEWbaWa"
++######################
+
+# 2024-09-09 03:42:28.898472
++/run cd /home/ubuntu/storm
+
+# 2024-09-09 03:42:29.023699
++/run git add frontend/demo_light/demo_util.py
+
+# 2024-09-09 03:42:29.151167
++/run git commit -m "Actualizar configuración para usar DeepSeek API"
+
+# 2024-09-09 03:42:29.316835
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 03:49:16.946652
++creo que lo que falta es solucionar este tema en el navegador: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: /home/ubuntu/storm/secrets.toml
++
++You can continue without API keys, but some features may not work.
+
+# 2024-09-09 03:51:12.362584
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 04:02:14.229084
++por favor, solucion a esto en el navegador: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: /home/ubuntu/storm/secrets.toml
++
++You can continue without API keys, but some features may not work.
+
+# 2024-09-09 04:03:05.499025
++/run nano /home/ubuntu/storm/frontend/demo_light/demo_util.py
+
+# 2024-09-09 04:04:39.371876
++/run streamlit run /home/ubuntu/storm/frontend/demo_light/storm.py
+
+# 2024-09-09 04:06:41.285493
++solucion
+
+# 2024-09-09 04:07:04.873064
++/run streamlit run /home/ubuntu/storm/frontend/demo_light/storm.py
+
+# 2024-09-09 04:16:18.293755
++solucion
+
+# 2024-09-09 04:17:09.594243
++me responderas solamente en español
+
+# 2024-09-09 04:19:33.055498
++/model openrouter/anthropic/claude-3-sonnet
+
+# 2024-09-09 04:20:51.999920
++me responderas solamente en español
+
+# 2024-09-09 04:21:04.388956
++/tokens
+
+# 2024-09-09 04:21:11.731969
++/add frontend/ 
+
+# 2024-09-09 04:21:25.259082
++/tokens
+
+# 2024-09-09 04:21:56.307200
++/run streamlit run /home/ubuntu/storm/frontend/demo_light/storm.py
+
+# 2024-09-09 04:22:43.940553
++solucion a esto: FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/archivos_de_salida/¿Miedo_al_exito?/conversation_log.json'
++Traceback:
++File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 74, in <module>
++    main()
++File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 70, in main
++    CreateNewArticle.create_new_article_page()
++File "/home/ubuntu/storm/frontend/demo_light/pages_util/CreateNewArticle.py", line 70, in create_new_article_page
++    demo_util._display_persona_conversations(DemoFileIOHelper.read_json_file(conversation_log_path))
++                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 79, in read_json_file
++    with open(file_path) as f:
++         ^^^^^^^^^^^^^^^
+
+# 2024-09-09 04:24:05.757934
++si hicistes los cambios? y el commit? no lo vi
+
+# 2024-09-09 04:24:47.726249
++haz los camnios mano
+
+# 2024-09-09 04:25:55.356275
++/run pip install -r frontend/demo_light/requirements.txt
+
+# 2024-09-09 04:26:19.916707
++/tokens
+
+# 2024-09-09 04:26:39.416384
++/run pip install -r frontend/demo_light/requirements.txt
+
+# 2024-09-09 04:27:00.632149
++/run streamlit run /home/ubuntu/storm/frontend/demo_light/storm.py
+
+# 2024-09-09 04:30:25.386492
++mano quitame esto de enfrente en el navegador, solucion: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: /home/ubuntu/storm/secrets.toml
++
++You can continue without API keys, but some features may not work.
+
+# 2024-09-09 04:31:25.048727
++/run streamlit run /home/ubuntu/storm/frontend/demo_light/storm.py
+
+# 2024-09-09 04:33:50.009176
++no puede ser que me consiga con esto cuando entro al navegador: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: /home/ubuntu/storm/secrets.toml
++
++You can continue without API keys, but some features may not work. Yo ya te dije donde estaba ese archivo, esta en la ruta principal /home/ubuntu/storm/secrets.toml soluciona eso de una vez por todas
+
+# 2024-09-09 05:07:54.366079
++/run streamlit run /home/ubuntu/storm/frontend/demo_light/storm.py
+
+# 2024-09-09 05:10:30.356749
++/model openrouter/openai/gpt-4o
+
+# 2024-09-09 05:10:37.629623
++no puede ser que me consiga con esto cuando entro al navegador: No secrets files found. Valid paths for a secrets.toml file are: /home/ubuntu/.streamlit/secrets.toml, /home/ubuntu/storm/.streamlit/secrets.toml
++
++No secrets file found. Please create a secrets.toml file in the root directory of the project with your API keys. Expected path: /home/ubuntu/storm/secrets.toml
++
++You can continue without API keys, but some features may not work. Yo ya te dije donde estaba ese archivo, esta en la ruta principal /home/ubuntu/storm/secrets.toml soluciona eso de una vez por todas
+
+# 2024-09-09 05:12:43.081040
++/run streamlit run /home/ubuntu/storm/frontend/demo_light/storm.py
+
+# 2024-09-09 05:14:00.238526
++ahora me sale esto: An error occurred while loading secrets: name 'toml' is not defined
++
++You can continue without API keys, but some features may not work.
+
+# 2024-09-09 05:14:40.581518
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 05:22:31.084521
++solucion
+
+# 2024-09-09 05:23:45.808715
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 05:25:13.483880
++solucion
+
+# 2024-09-09 05:26:14.397632
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 05:32:54.867940
++solucion
+
+# 2024-09-09 05:35:51.920624
++add/ eval
+
+# 2024-09-09 05:38:20.085324
++add eval/ knowledge_storm/
+
+# 2024-09-09 05:38:47.694142
++/add eval/ knowledge_storm/
+
+# 2024-09-09 05:39:09.427261
++/tokens
+
+# 2024-09-09 05:41:21.242124
++encuentra la solucion de manera nativa con storm, todo el contecto se encuentra en /home/ubuntu/storm/, alli tiene sufuciente contexto para solucionar
+
+# 2024-09-09 05:43:04.753484
++/drop knowledge_storm/ eval/
+
+# 2024-09-09 05:43:09.658889
++/tokens
+
+# 2024-09-09 05:43:29.428534
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 05:53:22.196242
++(storm) ubuntu@storm-bhs5:~/storm$ ls -la archivos_de_salida/
++total 20
++drwxr-xr-x  5 ubuntu ubuntu 4096 Sep  8 21:36 .
++drwxr-xr-x 20 ubuntu ubuntu 4096 Sep  9 04:06 ..
++drwxrwxr-x  2 ubuntu ubuntu 4096 Sep  8 21:34 Anatomia_Humana_Estructuta_sea
++drwxr-xr-x  2 ubuntu ubuntu 4096 Sep  8 22:07 Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela
++drwxrwxr-x  2 ubuntu ubuntu 4096 Sep  8 21:45 Estructura_Osea_en_la_Anatomia_Humana
++
+
+# 2024-09-09 05:56:33.336954
++yo creo que se generan desde aqui: (storm) ubuntu@storm-bhs5:~/storm$ ls -la knowledge_storm/
++total 128
++drwxr-xr-x  3 ubuntu ubuntu  4096 Sep  8 14:12 .
++drwxr-xr-x 20 ubuntu ubuntu  4096 Sep  9 04:06 ..
++-rw-r--r--  1 ubuntu ubuntu   133 Sep  8 14:12 __init__.py
++-rw-r--r--  1 ubuntu ubuntu 14925 Sep  8 14:12 interface.py
++-rw-r--r--  1 ubuntu ubuntu 31501 Sep  8 14:12 lm.py
++-rw-r--r--  1 ubuntu ubuntu 33666 Sep  8 14:12 rm.py
++drwxr-xr-x  3 ubuntu ubuntu  4096 Sep  8 14:12 storm_wiki
++-rw-r--r--  1 ubuntu ubuntu 26994 Sep  8 14:12 utils.py
++(storm) ubuntu@storm-bhs5:~/storm$ ls -la eval/
++total 76
++drwxr-xr-x  2 ubuntu ubuntu  4096 Sep  8 14:12 .
++drwxr-xr-x 20 ubuntu ubuntu  4096 Sep  9 04:06 ..
++-rw-r--r--  1 ubuntu ubuntu 14713 Sep  8 14:12 citation_quality.py
++-rw-r--r--  1 ubuntu ubuntu  8369 Sep  8 14:12 eval_article_quality.py
++-rw-r--r--  1 ubuntu ubuntu  2809 Sep  8 14:12 eval_outline_quality.py
++-rw-r--r--  1 ubuntu ubuntu   961 Sep  8 14:12 eval_prometheus_no_ref.prompt
++-rw-r--r--  1 ubuntu ubuntu  3138 Sep  8 14:12 eval_rubric_5.json
++-rw-r--r--  1 ubuntu ubuntu  8809 Sep  8 14:12 evaluation_prometheus.py
++-rw-r--r--  1 ubuntu ubuntu  4916 Sep  8 14:12 evaluation_trim_length.py
++-rw-r--r--  1 ubuntu ubuntu  4795 Sep  8 14:12 metrics.py
++
+
+# 2024-09-09 05:57:08.016830
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 05:59:01.229188
++/model deepseek-coder
+
+# 2024-09-09 05:59:53.520253
++/code
+
+# 2024-09-09 06:00:00.995389
++/ask
+
+# 2024-09-09 06:00:39.919391
++/help que significa diff>
+
+# 2024-09-09 06:01:38.512885
++/drop archivos_de_salida
+
+# 2024-09-09 06:01:49.857959
++/tokens
+
+# 2024-09-09 06:02:21.580029
++/add setup.py knowledge_storm/ frontend/ eval/ README.md web_app archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/
+
+# 2024-09-09 06:02:49.763979
++/drop web_app/
+
+# 2024-09-09 06:03:06.951968
++/tokens
+
+# 2024-09-09 06:05:08.691069
++/drop web_app archivos_de_salida/Elementos_Discretos_I_en_FACYT_de_la_Universidad_de_Carabobo_en_Venezuela/
+
+# 2024-09-09 06:05:12.617294
++/tokens
+
+# 2024-09-09 06:05:26.294705
++me responderas solamente en español
+
+# 2024-09-09 06:06:57.427097
++/model openrouter/google/gemini-pro-1.5
+
+# 2024-09-09 06:07:08.815337
++/tokens
+
+# 2024-09-09 06:10:15.585795
++yo creo que se generan desde aqui: (storm) ubuntu@storm-bhs5:~/storm$ ls -la knowledge_storm/
++total 128
++drwxr-xr-x  3 ubuntu ubuntu  4096 Sep  8 14:12 .
++drwxr-xr-x 20 ubuntu ubuntu  4096 Sep  9 04:06 ..
++-rw-r--r--  1 ubuntu ubuntu   133 Sep  8 14:12 __init__.py
++-rw-r--r--  1 ubuntu ubuntu 14925 Sep  8 14:12 interface.py
++-rw-r--r--  1 ubuntu ubuntu 31501 Sep  8 14:12 lm.py
++-rw-r--r--  1 ubuntu ubuntu 33666 Sep  8 14:12 rm.py
++drwxr-xr-x  3 ubuntu ubuntu  4096 Sep  8 14:12 storm_wiki
++-rw-r--r--  1 ubuntu ubuntu 26994 Sep  8 14:12 utils.py
++(storm) ubuntu@storm-bhs5:~/storm$ ls -la eval/
++total 76
++drwxr-xr-x  2 ubuntu ubuntu  4096 Sep  8 14:12 .
++drwxr-xr-x 20 ubuntu ubuntu  4096 Sep  9 04:06 ..
++-rw-r--r--  1 ubuntu ubuntu 14713 Sep  8 14:12 citation_quality.py
++-rw-r--r--  1 ubuntu ubuntu  8369 Sep  8 14:12 eval_article_quality.py
++-rw-r--r--  1 ubuntu ubuntu  2809 Sep  8 14:12 eval_outline_quality.py
++-rw-r--r--  1 ubuntu ubuntu   961 Sep  8 14:12 eval_prometheus_no_ref.prompt
++-rw-r--r--  1 ubuntu ubuntu  3138 Sep  8 14:12 eval_rubric_5.json
++-rw-r--r--  1 ubuntu ubuntu  8809 Sep  8 14:12 evaluation_prometheus.py
++-rw-r--r--  1 ubuntu ubuntu  4916 Sep  8 14:12 evaluation_trim_length.py
++-rw-r--r--  1 ubuntu ubuntu  4795 Sep  8 14:12 metrics.py
++alli tienes la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ soluciona por favor
+
+# 2024-09-09 06:13:36.097669
++/run rm -rf /home/ubuntu/storm/frontend/demo_light/DEMO_WORKING_DIR
+
+# 2024-09-09 06:13:50.119235
++haz los cambios
+
+# 2024-09-09 06:16:06.193431
++si hicistes los cambios? y el commit? no lo vi
+
+# 2024-09-09 06:16:53.042086
++mano realiza los cambios y haz el commit
+
+# 2024-09-09 06:17:18.979343
++haz tu todo
+
+# 2024-09-09 06:18:18.746200
++/tokens
+
+# 2024-09-09 06:18:49.291803
++/drop
+
+# 2024-09-09 06:19:23.191879
++/model openrouter/google/gemini-pro-1.5
+
+# 2024-09-09 06:20:23.571291
++/help como cambio al formado edit
+
+# 2024-09-09 06:21:14.097614
++/tokens
+
+# 2024-09-09 06:21:30.265482
++realiza los cambios
+
+# 2024-09-09 06:21:46.738425
++me responderas solamente en español
+
+# 2024-09-09 06:23:13.092928
++añade estos archivos: $ 0.0001       28 knowledge_storm/storm_wiki/__init__.py                   
++$ 0.0010      405 frontend/demo_light/README.md                            
++$ 0.0000        0 knowledge_storm/lm.py                                    
++$ 0.0107    4,261 knowledge_storm/storm_wiki/modules/storm_dataclass.py    
++$ 0.0037    1,498 knowledge_storm/storm_wiki/modules/outline_generation.py 
++$ 0.0002       70 frontend/demo_light/.streamlit/config.toml               
++$ 0.0047    1,877 eval/evaluation_prometheus.py                            
++$ 0.0006      240 eval/eval_prometheus_no_ref.prompt                       
++$ 0.0143    5,736 knowledge_storm/utils.py                                 
++$ 0.0028    1,102 eval/metrics.py                                          
++$ 0.0027    1,082 frontend/demo_light/stoc.py                              
++$ 0.0031    1,230 frontend/demo_light/pages_util/CreateNewArticle.py       
++$ 0.0035    1,414 knowledge_storm/storm_wiki/modules/article_generation.py 
++$ 0.0088    3,512 eval/citation_quality.py                                 
++$ 0.0015      613 eval/eval_rubric_5.json                                  
++$ 0.0002       75 frontend/demo_light/requirements.txt                     
++$ 0.0001       54 knowledge_storm/__init__.py                              
++$ 0.0016      645 eval/eval_outline_quality.py                             
++$ 0.0074    2,969 knowledge_storm/interface.py                             
++$ 0.0086    3,432 knowledge_storm/storm_wiki/engine.py                     
++$ 0.0045    1,791 knowledge_storm/storm_wiki/modules/retriever.py          
++$ 0.0028    1,103 eval/evaluation_trim_length.py                           
++$ 0.0023      916 frontend/demo_light/pages_util/MyArticles.py             
++$ 0.0172    6,875 knowledge_storm/rm.py                                    
++$ 0.0083    3,319 knowledge_storm/storm_wiki/modules/knowledge_curation.py 
++$ 0.0095    3,794 README.md                                                
++$ 0.0044    1,779 eval/eval_article_quality.py                             
++$ 0.0018      724 frontend/demo_light/storm.py                             
++$ 0.0008      327 setup.py                                                 
++$ 0.0006      253 knowledge_storm/storm_wiki/modules/callback.py           
++$ 0.0136    5,423 frontend/demo_light/demo_util.py                         
++$ 0.0035    1,419 knowledge_storm/storm_wiki/modules/persona_generator.py  
++$ 0.0001       46 knowledge_storm/storm_wiki/modules/__init__.py           
++$ 0.0025      997 knowledge_storm/storm_wiki/modules/article_polish.py 
+
+# 2024-09-09 06:25:34.791345
++yo creo que se generan desde aqui: (storm) ubuntu@storm-bhs5:~/storm$ ls -la knowledge_storm/
++total 128
++drwxr-xr-x  3 ubuntu ubuntu  4096 Sep  8 14:12 .
++drwxr-xr-x 20 ubuntu ubuntu  4096 Sep  9 04:06 ..
++-rw-r--r--  1 ubuntu ubuntu   133 Sep  8 14:12 __init__.py
++-rw-r--r--  1 ubuntu ubuntu 14925 Sep  8 14:12 interface.py
++-rw-r--r--  1 ubuntu ubuntu 31501 Sep  8 14:12 lm.py
++-rw-r--r--  1 ubuntu ubuntu 33666 Sep  8 14:12 rm.py
++drwxr-xr-x  3 ubuntu ubuntu  4096 Sep  8 14:12 storm_wiki
++-rw-r--r--  1 ubuntu ubuntu 26994 Sep  8 14:12 utils.py
++(storm) ubuntu@storm-bhs5:~/storm$ ls -la eval/
++total 76
++drwxr-xr-x  2 ubuntu ubuntu  4096 Sep  8 14:12 .
++drwxr-xr-x 20 ubuntu ubuntu  4096 Sep  9 04:06 ..
++-rw-r--r--  1 ubuntu ubuntu 14713 Sep  8 14:12 citation_quality.py
++-rw-r--r--  1 ubuntu ubuntu  8369 Sep  8 14:12 eval_article_quality.py
++-rw-r--r--  1 ubuntu ubuntu  2809 Sep  8 14:12 eval_outline_quality.py
++-rw-r--r--  1 ubuntu ubuntu   961 Sep  8 14:12 eval_prometheus_no_ref.prompt
++-rw-r--r--  1 ubuntu ubuntu  3138 Sep  8 14:12 eval_rubric_5.json
++-rw-r--r--  1 ubuntu ubuntu  8809 Sep  8 14:12 evaluation_prometheus.py
++-rw-r--r--  1 ubuntu ubuntu  4916 Sep  8 14:12 evaluation_trim_length.py
++-rw-r--r--  1 ubuntu ubuntu  4795 Sep  8 14:12 metrics.py
++alli tienes la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ realiza los cambios y haces el commit, soluciona por favor
+
+# 2024-09-09 06:26:59.426904
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 06:39:52.831063
++solucion a esto: Conversation log not found at /home/ubuntu/storm/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files. Te basas en la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ realiza los cambios y haces el commit, soluciona por favor
+
+# 2024-09-09 06:42:41.587687
++/model openrouter/cognitivecomputations/dolphin-mixtral-8x7b
+
+# 2024-09-09 06:42:54.474866
++/tokens
+
+# 2024-09-09 06:43:06.237527
++solucion a esto: Conversation log not found at /home/ubuntu/storm/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files. Te basas en la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ realiza los cambios y haces el commit, soluciona por favor
+
+# 2024-09-09 06:44:22.104204
++/model openrouter/meta-llama/llama-3-70b-instruct:nitro
+
+# 2024-09-09 06:44:28.580075
++/tokens
+
+# 2024-09-09 06:44:40.339976
++solucion a esto: Conversation log not found at /home/ubuntu/storm/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files. Te basas en la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ realiza los cambios y haces el commit, soluciona por favor
+
+# 2024-09-09 06:46:15.746552
++/model openrouter/mistralai/mixtral-8x22b-instruct
+
+# 2024-09-09 06:46:20.176711
++/tokens
+
+# 2024-09-09 06:46:27.085476
++solucion a esto: Conversation log not found at /home/ubuntu/storm/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files. Te basas en la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ realiza los cambios y haces el commit, soluciona por favor
+
+# 2024-09-09 06:46:57.522214
++/model openrouter/google/gemini-pro-vision
+
+# 2024-09-09 06:47:00.993835
++/tokens
+
+# 2024-09-09 06:47:05.350348
++solucion a esto: Conversation log not found at /home/ubuntu/storm/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files. Te basas en la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ realiza los cambios y haces el commit, soluciona por favor
+
+# 2024-09-09 06:47:31.070355
++/model openrouter/google/gemini-pro-1.5
+
+# 2024-09-09 06:47:35.668232
++/tokens
+
+# 2024-09-09 06:47:44.420358
++solucion a esto: Conversation log not found at /home/ubuntu/storm/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files. Te basas en la carpeta knowledge_storm/ y la carpeta eval/ ademas de la de frontend/ y yo hice que los archivos de investigacion se guarden en archivos_de_salida/ realiza los cambios y haces el commit, soluciona por favor
+
+# 2024-09-09 06:49:23.015803
++lo tienes tu alli, te ordeno que modifiques lo que tengas que modificar, guardes los cambios, y hagas el commit respectivo
+
+# 2024-09-09 06:52:03.882814
++/run git add frontend/demo_light/pages_util/CreateNewArticle.py frontend/demo_light/demo_util.py
+
+# 2024-09-09 06:52:04.044350
++/run git commit -m "Fix: Conversation log not found error"
+
+# 2024-09-09 06:52:37.719125
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 06:56:07.102031
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 06:59:23.590974
++/tokens
+
+# 2024-09-09 07:00:25.533564
++/drop
+
+# 2024-09-09 07:00:39.496233
++/add frontend/
+
+# 2024-09-09 07:00:45.102249
++/tokens
+
+# 2024-09-09 07:01:11.517588
++/model openrouter/anthropic/claude-3-sonnet
+
+# 2024-09-09 07:01:30.724943
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 07:02:47.734018
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:04:12.679306
++/run pip install pyarrow
+
+# 2024-09-09 07:04:31.405031
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:06:30.707060
++/model openrouter/anthropic/claude-3-opus
+
+# 2024-09-09 07:06:37.610543
++/tokens
+
+# 2024-09-09 07:06:49.296058
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 07:08:07.334263
++/model openrouter/mistralai/mixtral-8x22b-instruct
+
+# 2024-09-09 07:08:10.307724
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 07:08:53.659783
++/model openrouter/anthropic/claude-3-opus
+
+# 2024-09-09 07:09:57.932496
++/model openrouter/openai/gpt-4o
+
+# 2024-09-09 07:10:01.736892
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 07:10:30.352908
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:11:55.773579
++/model deepseek-coder
+
+# 2024-09-09 07:12:00.910909
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 07:12:29.002087
++/model openrouter/openai/gpt-4
+
+# 2024-09-09 07:12:34.438124
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 07:13:01.347675
++/model openrouter/openai/gpt-4o-2024-05-13
+
+# 2024-09-09 07:13:03.968735
++soluciona esto: 2024-09-09 06:53:02.968 Uncaught app exception
++Traceback (most recent call last):
++  File "/home/ubuntu/storm/lib/python3.12/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 535, in _run_script
++    exec(code, module.__dict__)
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 84, in <module>
++    main()
++  File "/home/ubuntu/storm/frontend/demo_light/storm.py", line 77, in main
++    MyArticles.my_articles_page()
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 66, in my_articles_page
++    article_card_setup(column_to_add=column_to_add,
++  File "/home/ubuntu/storm/frontend/demo_light/pages_util/MyArticles.py", line 31, in article_card_setup
++    image=DemoFileIOHelper.read_image_as_base64(
++          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "/home/ubuntu/storm/frontend/demo_light/demo_util.py", line 97, in read_image_as_base64
++    with open(image_path, "rb") as f:
++         ^^^^^^^^^^^^^^^^^^^^^^
++FileNotFoundError: [Errno 2] No such file or directory: '/home/ubuntu/storm/frontend/frontend/demo_light/assets/void.jpg'
+
+# 2024-09-09 07:13:20.291432
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:14:16.517373
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:24:11.913415
++ademas solucion: Conversation log not found at /home/ubuntu/storm/frontend/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files.
+
+# 2024-09-09 07:25:23.735540
++/tokens
+
+# 2024-09-09 07:25:45.305103
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:26:37.705308
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:37:14.563119
++y ademas solucion, ya que veo esto desde el navegador: Conversation log not found at /home/ubuntu/storm/frontend/demo_light/archivos_de_salida/Miedo_al_Exito_en_2024/conversation_log.json. Please check the article files.
+
+# 2024-09-09 07:38:15.622380
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 07:50:15.319754
++mano solucion a esto: Conversation log not found at /home/ubuntu/storm/frontend/demo_light/archivos_de_salida/Miedo_al_Mañana_en_2024/conversation_log.json. Please check the article files. No estoy viendo la creacion de nuevas investigaciones en (storm) ubuntu@storm-bhs5:~/storm$ ls -la archivos_de_salida/
+
+# 2024-09-09 07:52:54.651149
++asegurate que se creen desde el navegador las nuevas investigaciones en archivos_de_salida/
+
+# 2024-09-09 08:05:11.999386
++/model deepseek-chat
+
+# 2024-09-09 08:05:22.623801
++/tokens
+
+# 2024-09-09 08:05:32.473406
++asegurate que se creen desde el navegador las nuevas investigaciones en archivos_de_salida/
+
+# 2024-09-09 08:06:03.667903
++/model deepseek-coder
+
+# 2024-09-09 08:06:08.606735
++/tokens
+
+# 2024-09-09 08:06:12.681824
++asegurate que se creen desde el navegador las nuevas investigaciones en archivos_de_salida/
+
+# 2024-09-09 08:07:06.278877
++/model openrouter/meta-llama/llama-3-8b-instruct:free
+
+# 2024-09-09 08:07:10.756200
++/tokens
+
+# 2024-09-09 08:07:14.573634
++asegurate que se creen desde el navegador las nuevas investigaciones en archivos_de_salida/
+
+# 2024-09-09 08:09:16.201382
++/model openrouter/openai/gpt-4o-2024-05-13
+
+# 2024-09-09 08:09:21.879000
++/tokens
+
+# 2024-09-09 08:09:29.849157
++asegurate que se creen desde el navegador las nuevas investigaciones en archivos_de_salida/
+
+# 2024-09-09 08:12:35.317038
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 08:26:32.126794
++Coño que NO es aqui /home/ubuntu/storm/frontend/archivos_de_salida/ acomoda porque la ruta es aqui /home/ubuntu/storm/archivos_de_salida/
+
+# 2024-09-09 08:27:20.406935
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 08:34:01.417850
++Coño que NO es aqui /home/ubuntu/storm/frontend/archivos_de_salida/ acomoda porque la ruta es aqui /home/ubuntu/storm/archivos_de_salida/ Elimina esta carpeta:/home/ubuntu/storm/frontend/archivos_de_salida/ y asegurate que los demas archivos se guarden en /home/ubuntu/storm/archivos_de_salida/ tanto si la investigacion es genereda desde el terminal de storm, como si la investigacion es generada desde el navegador. Eres un experto en storm, haz las modificaciones necesarias para que funcione perfecto
+
+# 2024-09-09 08:35:41.785164
++/run rm -rf /home/ubuntu/storm/frontend/archivos_de_salida/
+
+# 2024-09-09 08:35:49.274372
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 08:38:52.189795
++mano quee otros archivos de storm necesitas ver para que se pueda hacer lo que te dije?
+
+# 2024-09-09 08:39:45.794029
++/run rm -rf /home/ubuntu/storm/frontend/archivos_de_salida/
+
+# 2024-09-09 08:39:49.571491
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-09 08:41:18.998877
++mano quee otros archivos de storm necesitas ver para que se pueda hacer lo que te dije? Ve al repositorio y revisa si necesitas que traiga con /add algun otro archivo para que se pueda generar la investigacion desde el navegador?
+
+# 2024-09-09 08:43:56.100067
++no se dime tu. aqui te coloco esto y tu me dices: (storm) ubuntu@storm-bhs5:~/storm$ ls -la 
++total 1408
++drwxr-xr-x 20 ubuntu ubuntu    4096 Sep  9 04:06 .
++drwxr-x--- 10 ubuntu ubuntu    4096 Sep  9 01:18 ..
++-rw-r--r--  1 ubuntu ubuntu 1166784 Sep  9 08:41 .aider.chat.history.md
++-rw-r--r--  1 ubuntu ubuntu  101898 Sep  9 08:41 .aider.input.history
++drwxr-xr-x  2 ubuntu ubuntu    4096 Sep  8 23:56 .aider.tags.cache.v3
++-rw-r--r--  1 ubuntu ubuntu   10132 Sep  9 03:07 .env
++drwxr-xr-x  8 ubuntu ubuntu    4096 Sep  9 08:39 .git
++drwxr-xr-x  4 ubuntu ubuntu    4096 Sep  8 14:12 .github
++-rw-r--r--  1 ubuntu ubuntu     337 Sep  8 16:45 .gitignore
++-rw-r--r--  1 ubuntu ubuntu     244 Sep  8 14:12 .pre-commit-config.yaml
++-rw-r--r--  1 ubuntu ubuntu    2395 Sep  8 14:12 CONTRIBUTING.md
++drwxrwxr-x  7 ubuntu ubuntu    4096 Sep  9 07:39 DEMO_WORKING_DIR
++drwxr-xr-x  4 ubuntu ubuntu    4096 Sep  8 14:12 FreshWiki
++-rw-r--r--  1 ubuntu ubuntu    1091 Sep  8 14:12 LICENSE
++-rw-r--r--  1 ubuntu ubuntu   15931 Sep  8 14:12 README.md
++drwxr-xr-x  5 ubuntu ubuntu    4096 Sep  8 21:36 archivos_de_salida
++drwxr-xr-x  2 ubuntu ubuntu    4096 Sep  8 14:12 assets
++drwxr-xr-x  2 ubuntu ubuntu    4096 Sep  9 07:03 bin
++drwxrwxr-x  3 ubuntu ubuntu    4096 Sep  9 02:17 etc
++drwxr-xr-x  2 ubuntu ubuntu    4096 Sep  8 14:12 eval
++drwxr-xr-x  3 ubuntu ubuntu    4096 Sep  8 14:46 examples
++drwxr-xr-x  4 ubuntu ubuntu    4096 Sep  9 08:35 frontend
++drwxr-xr-x  4 ubuntu ubuntu    4096 Sep  8 14:16 include
++drwxr-xr-x  3 ubuntu ubuntu    4096 Sep  8 14:12 knowledge_storm
++drwxr-xr-x  3 ubuntu ubuntu    4096 Sep  8 14:12 lib
++lrwxrwxrwx  1 ubuntu ubuntu       3 Sep  8 14:12 lib64 -> lib
++-rw-r--r--  1 ubuntu ubuntu     157 Sep  8 14:12 pyvenv.cfg
++-rw-r--r--  1 ubuntu ubuntu     325 Sep  9 02:19 requirements.txt
++-rw-r--r--  1 ubuntu ubuntu     303 Sep  8 14:52 secrets.toml
++-rw-r--r--  1 ubuntu ubuntu    1315 Sep  8 14:12 setup.py
++drwxr-xr-x  4 ubuntu ubuntu    4096 Sep  9 02:17 share
+
+# 2024-09-09 08:46:04.348230
++/add knowledge_storm/__init__.py
+
+# 2024-09-09 08:46:24.574431
++alli te coloque knowledge_storm/__init__.py
+
+# 2024-09-09 08:47:41.378985
++/run streamlit run frontend/demo_light/storm.py
