@@ -506,7 +506,6 @@ def set_storm_runner():
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
     
-    # Assuming you have a valid secrets.toml file at /home/ubuntu/storm/secrets.toml
     secrets_path = '/home/ubuntu/storm/secrets.toml'
     if os.path.exists(secrets_path):
         try:
@@ -519,7 +518,7 @@ def set_storm_runner():
             st.error(f"Error reading {secrets_path}: {str(e)}")
             deepseek_api_key = deepseek_api_base = ydc_api_key = None
     else:
-        st.warning(f"No secrets.toml file found at {secrets_path}. Some features may not work.")
+        st.error(f"No secrets.toml file found at {secrets_path}. Please create a secrets.toml file with your API keys at this location.")
         deepseek_api_key = deepseek_api_base = ydc_api_key = None
         
         secrets_paths = [
