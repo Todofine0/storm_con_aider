@@ -506,22 +506,32 @@ def set_storm_runner():
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
     
-    secrets_path = '/home/ubuntu/storm/secrets.toml'
-    if os.path.exists(secrets_path):
-        try:
-            with open(secrets_path, 'r') as f:
-                secrets = toml.load(f)
-            deepseek_api_key = secrets.get('DEEPSEEK_API_KEY')
-            deepseek_api_base = secrets.get('DEEPSEEK_API_BASE')
-            ydc_api_key = secrets.get('YDC_API_KEY')
-            if not all([deepseek_api_key, deepseek_api_base, ydc_api_key]):
-                raise ValueError("Missing required API keys in secrets.toml")
-        except Exception as e:
-            st.error(f"Error reading {secrets_path}: {str(e)}")
-            st.warning("You can continue without API keys, but some features may not work.")
-            deepseek_api_key = deepseek_api_base = ydc_api_key = None
-    else:
-        st.error(f"No secrets.toml file found at {secrets_path}")
+    secrets_paths = [
+        '/home/ubuntu/.streamlit/secrets.toml',
+        '/home/ubuntu/storm/.streamlit/secrets.toml',
+        '/home/ubuntu/storm/secrets.toml'
+    ]
+    secrets_found = False
+    for secrets_path in secrets_paths:
+        if os.path.exists(secrets_path):
+            try:
+                with open(secrets_path, 'r') as f:
+                    secrets = toml.load(f)
+                deepseek_api_key = secrets.get('DEEPSEEK_API_KEY')
+                deepseek_api_base = secrets.get('DEEPSEEK_API_BASE')
+                ydc_api_key = secrets.get('YDC_API_KEY')
+                if all([deepseek_api_key, deepseek_api_base, ydc_api_key]):
+                    secrets_found = True
+                    break
+                else:
+                    st.warning(f"Missing required API keys in {secrets_path}")
+            except Exception as e:
+                st.error(f"Error reading {secrets_path}: {str(e)}")
+    
+    if not secrets_found:
+        st.error("No valid secrets.toml file found. Please create a secrets.toml file in one of the following locations:")
+        for path in secrets_paths:
+            st.error(f"- {path}")
         st.warning("You can continue without API keys, but some features may not work.")
         deepseek_api_key = deepseek_api_base = ydc_api_key = None
 
