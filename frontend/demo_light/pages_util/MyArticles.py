@@ -29,7 +29,7 @@ def my_articles_page():
             hasClicked = card(title=" / ".join(card_title),
                               text=article_name.replace("_", " "),
                               image=DemoFileIOHelper.read_image_as_base64(
-                                  os.path.join(demo_util.get_demo_dir(), "assets", "void.jpg")),
+                                  os.path.join(demo_util.get_demo_dir(), "frontend", "demo_light", "assets", "void.jpg")),
                               styles=DemoUIHelper.get_article_card_UI_style(boarder_color="#9AD8E1"))
             if hasClicked:
                 st.session_state["page2_selected_my_article"] = article_name
