@@ -525,10 +525,15 @@ def set_storm_runner():
         ydc_api_key = None
 
     if openai_api_key:
+        openai_model = OpenAIModel(model='gpt-4-1106-preview', api_key=openai_api_key,
+                                   api_provider='openai',
+                                   max_tokens=500, temperature=1.0, top_p=0.9)
         llm_configs.init_openai_model(openai_api_key=openai_api_key, openai_type='openai')
-        llm_configs.set_question_asker_lm(OpenAIModel(model='gpt-4-1106-preview', api_key=openai_api_key,
-                                                      api_provider='openai',
-                                                      max_tokens=500, temperature=1.0, top_p=0.9))
+        llm_configs.set_conv_simulator_lm(openai_model)
+        llm_configs.set_question_asker_lm(openai_model)
+        llm_configs.set_outline_gen_lm(openai_model)
+        llm_configs.set_article_gen_lm(openai_model)
+        llm_configs.set_article_polish_lm(openai_model)
     else:
         st.warning("OpenAI API key not found. Some features will be disabled.")
 
