@@ -522,6 +522,11 @@ def set_storm_runner():
         st.warning(f"No secrets.toml file found at {secrets_path}. Some features may not work.")
         deepseek_api_key = deepseek_api_base = ydc_api_key = None
         
+        secrets_paths = [
+            '/home/ubuntu/.streamlit/secrets.toml',
+            '/home/ubuntu/storm/.streamlit/secrets.toml',
+            '/home/ubuntu/storm/secrets.toml'
+        ]
         # Create an empty secrets.toml file in the first available location
         for secrets_path in secrets_paths:
             try:
