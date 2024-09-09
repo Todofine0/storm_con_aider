@@ -57,19 +57,26 @@ def create_new_article_page():
         st_callback_handler = demo_util.StreamlitCallbackHandler(status)
         with status:
             # STORM main gen outline
-            st.session_state["runner"].run(
-                topic=st.session_state["page3_topic"],
-                do_research=True,
-                do_generate_outline=True,
-                do_generate_article=False,
-                do_polish_article=False,
-                callback_handler=st_callback_handler
-            )
-            conversation_log_dir = os.path.join(st.session_state["page3_current_working_dir"],
-                                                st.session_state["page3_topic_name_truncated"])
-            conversation_log_path = os.path.join(conversation_log_dir, "conversation_log.json")
-            if not os.path.exists(conversation_log_dir):
-                os.makedirs(conversation_log_dir)
+            try:
+                st.session_state["runner"].run(
+                    topic=st.session_state["page3_topic"],
+                    do_research=True,
+                    do_generate_outline=True,
+                    do_generate_article=False,
+                    do_polish_article=False,
+                    callback_handler=st_callback_handler
+                )
+                conversation_log_dir = os.path.join(st.session_state["page3_current_working_dir"],
+                                                    st.session_state["page3_topic_name_truncated"])
+                conversation_log_path = os.path.join(conversation_log_dir, "conversation_log.json")
+                if not os.path.exists(conversation_log_dir):
+                    os.makedirs(conversation_log_dir)
+                if os.path.exists(conversation_log_path):
+                    demo_util._display_persona_conversations(DemoFileIOHelper.read_json_file(conversation_log_path))
+                else:
+                    st.error(f"Conversation log not found at {conversation_log_path}. Please check the article files.")
+            except Exception as e:
+                st.error(f"An error occurred during the research process: {str(e)}")
             if os.path.exists(conversation_log_path):
                 demo_util._display_persona_conversations(DemoFileIOHelper.read_json_file(conversation_log_path))
             else:
