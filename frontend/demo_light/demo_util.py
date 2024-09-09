@@ -510,6 +510,9 @@ def set_storm_runner():
     demo_dir = get_demo_dir()
     current_working_dir = os.path.join(demo_dir, "DEMO_WORKING_DIR")
     os.makedirs(current_working_dir, exist_ok=True)
+    demo_dir = get_demo_dir()
+    current_working_dir = os.path.join(demo_dir, "DEMO_WORKING_DIR")
+    os.makedirs(current_working_dir, exist_ok=True)
 
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
