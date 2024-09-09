@@ -3,6 +3,7 @@ import datetime
 import json
 import os
 import re
+import toml
 from typing import Optional
 
 import markdown
@@ -505,11 +506,21 @@ def set_storm_runner():
     # configure STORM runner
     llm_configs = STORMWikiLMConfigs()
     
-    try:
-        openai_api_key = st.secrets['OPENAI_API_KEY']
-        ydc_api_key = st.secrets['YDC_API_KEY']
-    except KeyError:
-        st.error("API keys not found in secrets. Some features will be disabled.")
+    secrets_path = os.path.join(get_demo_dir(), '.streamlit', 'secrets.toml')
+    if os.path.exists(secrets_path):
+        try:
+            with open(secrets_path, 'r') as f:
+                secrets = toml.load(f)
+            openai_api_key = secrets.get('OPENAI_API_KEY')
+            ydc_api_key = secrets.get('YDC_API_KEY')
+            if not openai_api_key or not ydc_api_key:
+                st.error("API keys not found in secrets.toml. Some features will be disabled.")
+        except Exception as e:
+            st.error(f"Error reading secrets.toml: {str(e)}")
+            openai_api_key = None
+            ydc_api_key = None
+    else:
+        st.error(f"secrets.toml file not found at {secrets_path}. Please create this file with your API keys.")
         openai_api_key = None
         ydc_api_key = None
 
