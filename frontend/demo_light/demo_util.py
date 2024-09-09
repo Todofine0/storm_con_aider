@@ -554,7 +554,6 @@ def set_storm_runner():
         deepseek_model = DeepSeekModel(model='deepseek-chat', api_key=deepseek_api_key,
                                        api_base=deepseek_api_base,
                                        max_tokens=500, temperature=1.0, top_p=0.9)
-        llm_configs.init_deepseek_model(deepseek_api_key=deepseek_api_key, deepseek_api_base=deepseek_api_base)
         llm_configs.set_conv_simulator_lm(deepseek_model)
         llm_configs.set_question_asker_lm(deepseek_model)
         llm_configs.set_outline_gen_lm(deepseek_model)
