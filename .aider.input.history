@@ -1,0 +1,60 @@
+
+# 2024-09-10 04:59:39.278395
++me responderas solamente en español
+
+# 2024-09-10 05:02:02.638434
++/add setup.py knowledge_storm/ frontend/ eval/ README.md
+
+# 2024-09-10 05:02:08.922687
++/tokens
+
+# 2024-09-10 05:04:35.571333
++/run streamlit run frontend/demo_light/storm.py
+
+# 2024-09-10 05:19:40.968461
++/model openrouter/anthropic/claude-3-haiku-20240307
+
+# 2024-09-10 05:19:55.083906
++/tokens
+
+# 2024-09-10 05:20:17.402025
++/model openrouter/anthropic/claude-3-haiku
+
+# 2024-09-10 05:20:20.531517
++/tokens
+
+# 2024-09-10 05:20:52.698221
++/model openrouter/anthropic/claude-3.5-sonnet
+
+# 2024-09-10 05:20:55.101992
++/tokens
+
+# 2024-09-10 15:42:07.442186
++me responderas solamente en español
+
+# 2024-09-10 15:42:18.147709
++/tokens
+
+# 2024-09-10 15:42:39.459915
++/add setup.py knowledge_storm/ frontend/ eval/ README.md
+
+# 2024-09-10 15:42:41.737739
++/tokens
+
+# 2024-09-10 15:43:46.796621
++/ls /home/ubuntu/storm/.streamlit/
+
+# 2024-09-10 15:44:01.616062
++/run ls /home/ubuntu/storm/.streamlit/
+
+# 2024-09-10 15:44:22.577108
++/run ls -la /home/ubuntu/storm/.streamlit/
+
+# 2024-09-10 15:46:00.231918
++/add .streamlit/
+
+# 2024-09-10 15:46:48.065489
++/git status
+
+# 2024-09-10 15:47:33.933245
++/git add .
